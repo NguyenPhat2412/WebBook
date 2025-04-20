@@ -1,13 +1,14 @@
 import { useState } from "react";
 import NavBar1 from "../../../components/Navbar/NavBar1";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const [serverError, setServerError] = useState("");
+  const navigate = useNavigate();
 
   const validate = () => {
     const newErrors = {};
@@ -32,9 +33,9 @@ const LoginPage = () => {
 
       if (response.ok) {
         alert("Login successful!");
-        // ✅ Optionally: lưu token hoặc redirect
-        // localStorage.setItem("token", data.token);
-        // navigate("/dashboard");
+
+        // Chuyển sang trang chủ
+        navigate("/");
       } else {
         setServerError(data.message || "Login failed");
       }

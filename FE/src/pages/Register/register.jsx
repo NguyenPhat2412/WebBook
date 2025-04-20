@@ -1,7 +1,7 @@
 import { useState } from "react";
 import NavBar1 from "../../../components/Navbar/NavBar1";
 import "./register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -9,6 +9,7 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [fullName, setFullName] = useState("");
+  const navigate = useNavigate();
 
   // Từng lỗi riêng
   const [errors, setErrors] = useState({});
@@ -61,6 +62,9 @@ const RegisterPage = () => {
         setPhoneNumber("");
         setFullName("");
         setErrors({});
+
+        // chuyển sang trang đăng nhập
+        navigate("/login");
       } else {
         alert(data.message || "Something went wrong!");
       }

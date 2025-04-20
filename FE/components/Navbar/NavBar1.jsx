@@ -6,7 +6,9 @@ const NavBar1 = () => {
     <nav className="navbar">
       <div className="navbar-header-big">
         <div className="navbar-header">
-          <h1>Booking Website</h1>
+          <Link to="/" className="navbar-logo">
+            <h1>Booking Website</h1>
+          </Link>
           <div className="nav-btn">
             <Link to="/register">
               <button>Register</button>
