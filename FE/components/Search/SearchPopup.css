@@ -1,0 +1,68 @@
+/* searchPopup.css */
+
+.searchPopup {
+  width: 300px;
+  padding: 20px;
+  height: fit-content;
+  background-color: #febb02;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.searchOptionNumber {
+  display: flex;
+  justify-content: space-between;
+}
+.searchPopup h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.searchPopup label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.searchPopup input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.searchOptions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.searchOptions span {
+  font-size: 14px;
+  color: #333;
+}
+
+.searchBtn {
+  background-color: #0073e6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchBtn:hover {
+  background-color: #005bb5;
+}
+
+.searchOptionNumber .Option-input {
+  max-width: 60px;
+  max-height: 20px;
+}

@@ -1,0 +1,84 @@
+header {
+  background-color: rgb(8, 8, 97);
+}
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.header-content h1 {
+  padding-top: 36px;
+  color: white;
+}
+.header-content h3 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: white;
+}
+.header-content .header-btn button {
+  margin-bottom: 36px;
+  padding: 20px 20px;
+  /* border-radius: 5px; */
+  color: white;
+  cursor: pointer;
+  background-color: #0d7588;
+  border: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.header-search {
+  padding: 20px;
+  padding-left: 50px;
+  background-color: azure;
+  border: 3px solid orange;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  transform: translateY(50%);
+}
+.header-search button {
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0d7588;
+  color: white;
+  border: none;
+  font-size: 16px;
+  transition: 0.3s;
+  margin: 5px;
+}
+.header-search input {
+  padding: 10px 60px;
+
+  border: 1px solid azure;
+}
+.header-search input:hover {
+  border: 1px solid #0d7588;
+}
+
+.header-search .date-modal {
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+}
+.rdrMonthAndYearWrapper,
+.rdrWeekDays,
+.rdrDay {
+  font-size: 14px; /* Giúp chữ nhỏ hơn */
+  display: flex;
+  justify-content: center;
+}
+.rdrWeekDays {
+  display: flex;
+  justify-content: space-around;
+}
+.rdrDays button {
+  width: 45.5px;
+  height: 45.5px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}

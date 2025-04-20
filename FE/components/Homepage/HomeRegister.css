@@ -1,0 +1,39 @@
+.home-register {
+  background-color: rgb(8, 8, 97);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  margin-top: 72px;
+}
+.home-register h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.home-register p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.home-register .register-form-inputs {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  align-items: center;
+}
+.register-input {
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  padding-right: 126px;
+}
+.home-register .register-form-inputs button {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
