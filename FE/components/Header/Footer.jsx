@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   const [columns, setColumns] = useState([]);
   useEffect(() => {
-    fetch("../../data/footer.json")
+    fetch("http://localhost:5000/api/footer")
       .then((res) => res.json())
       .then((data) => {
         setColumns(data);

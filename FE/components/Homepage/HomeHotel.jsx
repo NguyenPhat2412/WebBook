@@ -3,7 +3,7 @@ import "./HomeHotel.css";
 const HomeHotel = () => {
   const [hotel, setHotel] = useState([]);
   useEffect(() => {
-    fetch("../../data/type.json")
+    fetch("http://localhost:5000/api/type")
       .then((res) => res.json())
       .then((data) => {
         setHotel(data);

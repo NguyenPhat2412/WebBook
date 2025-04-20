@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
+import { SearchContext } from "../Search/SearchContext";
 
 const HeaderWebsite = () => {
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [city, setCity] = useState("");
+  const [roomCount, setRoomCount] = useState("");
   const [dateRange, setDateRange] = useState([
     {
       startDate: new Date(),
@@ -14,12 +18,25 @@ const HeaderWebsite = () => {
     },
   ]);
 
+  const navigate = useNavigate();
+  const { setSearchData } = useContext(SearchContext);
+
   const handleSelect = (ranges) => {
     setDateRange([ranges.selection]);
   };
 
-  const handlePage = () => {
-    window.location.href = "/search";
+  const handleSearch = () => {
+    const formattedSearchData = {
+      city: city.trim(),
+      startDate: dateRange[0].startDate.toISOString(),
+      endDate: dateRange[0].endDate.toISOString(),
+      roomCount: roomCount.trim(),
+    };
+
+    console.log("🔍 searchData gửi đi:", formattedSearchData);
+
+    setSearchData(formattedSearchData);
+    navigate("/search");
   };
 
   return (
@@ -28,7 +45,11 @@ const HeaderWebsite = () => {
         <div className="header-search">
           <div>
             <i className="fa fa-bed"></i>
-            <input placeholder="Where are you going?" />
+            <input
+              placeholder="Where are you going?"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
           </div>
           <div>
             <i className="fa fa-calendar"></i>
@@ -59,10 +80,14 @@ const HeaderWebsite = () => {
           </div>
           <div>
             <i className="fa fa-female"></i>
-            <input placeholder="1 adult · 0 children · 1 room" />
+            <input
+              placeholder="1 adult · 0 children · 1 room"
+              value={roomCount}
+              onChange={(e) => setRoomCount(e.target.value)}
+            />
           </div>
           <div>
-            <button onClick={handlePage}>Search</button>
+            <button onClick={handleSearch}>Search</button>
           </div>
         </div>
       </div>

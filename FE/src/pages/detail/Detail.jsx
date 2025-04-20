@@ -7,9 +7,11 @@ const Detail = () => {
   const [hotel, setHotel] = useState(null);
 
   useEffect(() => {
-    fetch("../../../data/detail.json")
+    fetch("http://localhost:5000/api/detail")
       .then((res) => res.json())
-      .then((data) => setHotel(data))
+      .then((data) => {
+        setHotel(...data);
+      })
       .catch((err) => console.log(err));
   }, []);
 

@@ -3,7 +3,7 @@ import "./HomePoverty.css";
 const HomePoverty = () => {
   const [poverty, setPoverty] = useState([]);
   useEffect(() => {
-    fetch("../../data/hotel_list.json")
+    fetch("http://localhost:5000/api/hotel_list")
       .then((res) => res.json())
       .then((data) => {
         setPoverty(data);
@@ -21,7 +21,7 @@ const HomePoverty = () => {
             {poverty.map((item, index) => (
               <div key={index} className="poverty-item">
                 <img
-                  src={item.image_url}
+                  src={item.photos}
                   alt={item.name}
                   className="poverty-img"
                 />
@@ -30,7 +30,7 @@ const HomePoverty = () => {
                     {item.name}
                   </a>
                   <p>{item.city}</p>
-                  <p>Starting from ${item.price}</p>
+                  <p>Starting from ${item.cheapestPrice}</p>
                   <div style={{ display: "flex", gap: "10px" }}>
                     <p
                       style={{

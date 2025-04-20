@@ -28,6 +28,8 @@
   width: 100%;
   padding: 15px;
   padding-right: 126px;
+  background-color: aliceblue;
+  color: black;
 }
 .home-register .register-form-inputs button {
   padding: 15px;

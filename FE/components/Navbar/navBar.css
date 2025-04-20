@@ -67,3 +67,27 @@
   align-items: center;
   margin-bottom: 24px;
 }
+
+.btn-logout {
+  background-color: #fff;
+  color: #0033cc;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn-logout:hover {
+  background-color: #0033cc;
+  color: white;
+  border-radius: 5px;
+}
+
+.div-logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}

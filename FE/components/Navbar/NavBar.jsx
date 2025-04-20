@@ -9,13 +9,29 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("../../data/navBar.json")
+    fetch("http://localhost:5000/api/navbar")
       .then((res) => res.json())
       .then((data) => {
         setNavData(data);
         console.log(data);
       })
       .catch((err) => console.log(err));
+  }, []);
+
+  // hàm lấy tên user
+  useEffect(() => {
+    fetch("http://localhost:5000/api/users")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error("Failed to fetch user data");
+      })
+      .then((data) => {
+        setCurrentUser(...data);
+        console.log(data);
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   const handleLogout = () => {
@@ -43,9 +59,11 @@ const NavBar = () => {
               </Link>
             </div>
           ) : (
-            <div>
-              <h3 style={{ color: "white" }}>Hello, {currentUser.username}</h3>
-              <button onClick={handleLogout}>Logout</button>
+            <div className="div-logout">
+              <h3 style={{ color: "white" }}>Hello, {currentUser.fullName}</h3>
+              <button className="btn-logout bg-white" onClick={handleLogout}>
+                Logout
+              </button>
             </div>
           )}
         </div>

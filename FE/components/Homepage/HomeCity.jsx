@@ -4,7 +4,7 @@ const HomeCity = () => {
   const [city, setCity] = useState([]);
   // cach lay file tu file json
   useEffect(() => {
-    fetch("../../data/city.json")
+    fetch("http://localhost:5000/api/city")
       .then((res) => res.json())
       .then((data) => {
         setCity(data);
