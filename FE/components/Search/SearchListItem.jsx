@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./SearchListItem.css";
+// import { useState } from "react";
 const SearchListItem = ({ hotel }) => {
-  const ChangeDetailPage = () => {
-    window.location.href = "/detail";
+  const navigate = useNavigate();
+  const handleHotelClick = (_id) => {
+    console.log(_id);
+    navigate(`/detail/${_id}`, { state: { hotelId: _id } });
   };
+
   return (
     <div className="searchItem">
       <img src={hotel.photos} alt="{hotel.name}" className="siImg" />
@@ -21,7 +26,10 @@ const SearchListItem = ({ hotel }) => {
         <div className="sỉPrice">
           <span className="siPriceCol">${hotel.cheapestPrice}</span>
           <p className="sỉPricePra">Includes taxes and fees</p>
-          <button className="siCheckBtn" onClick={() => ChangeDetailPage()}>
+          <button
+            className="siCheckBtn"
+            onClick={() => handleHotelClick(hotel._id)}
+          >
             See availability
           </button>
         </div>

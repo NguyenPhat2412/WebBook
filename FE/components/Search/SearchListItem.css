@@ -23,6 +23,7 @@
   flex-direction: column;
   font-weight: bold;
   gap: 10px;
+  font-size: 12px;
 }
 
 .siTitle {

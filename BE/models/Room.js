@@ -22,12 +22,8 @@ const roomSchema = new Schema(
         unavailableDates: { type: [Date] },
       },
     ],
-    hotel: {
-      type: Schema.Types.ObjectId,
-      ref: "Hotel",
-    },
   },
-  { timestamps: true }
+  { collection: "room", timestamps: true }
 );
 
 module.exports = mongoose.model("Room", roomSchema);

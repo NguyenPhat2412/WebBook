@@ -1,0 +1,143 @@
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  padding-top: 24px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.checkoutWrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.checkoutTitle h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.checkoutDetails {
+  background-color: #bddad7;
+}
+
+.checkoutDetails .checkoutLocation {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  padding-left: 30px;
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+.checkoutDetails button {
+  background-color: #036280;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkoutDate {
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+}
+.checkoutDate .date-modal {
+  margin-top: 15px;
+}
+.checkoutDate .date-modal h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+.checkoutDate .checkoutDateInfo {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.checkoutDate .checkoutDateInfo h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.checkoutDate .checkoutDateInfo .checkoutInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.checkoutDate .checkoutDateInfo .checkoutInfo input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.rooms-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.rooms-selection .rooms-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.room-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.room-numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.rooms-selection-container {
+  padding-top: 20px;
+}
+.rooms-selection-container h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.reserveBtn-checkout {
+  background-color: #0073e6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.payment-method {
+  margin-top: 20px;
+}
+
+.payment-method h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}

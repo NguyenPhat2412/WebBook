@@ -2,19 +2,26 @@ import NavBar from "../../../components/Navbar/NavBar";
 import Footer from "../../../components/Header/Footer";
 import "./Detail.css";
 import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = () => {
   const [hotel, setHotel] = useState(null);
-
+  const navigator = useNavigate();
+  const { id } = useParams();
   useEffect(() => {
-    fetch("http://localhost:5000/api/detail")
+    fetch(`http://localhost:5000/api/hotel/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setHotel(...data);
+        setHotel(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
+  // chuyển sang checkout
+  const handleCheckout = () => {
+    console.log(id);
+    navigator(`/checkout/${id}`);
+  };
   if (!hotel) return <h2>Loading...</h2>;
 
   return (
@@ -24,7 +31,9 @@ const Detail = () => {
         <div className="detailWrapper">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <h1>{hotel.name}</h1>
-            <button className="bookNowBtn">Reserve or Book Now!</button>
+            <button className="bookNowBtn" onClick={handleCheckout}>
+              Reserve or Book Now!
+            </button>
           </div>
 
           <p
@@ -38,7 +47,12 @@ const Detail = () => {
             ></i>
             {hotel.address}
           </p>
-          <span className="highlight">{hotel.distance} from center</span>
+          <div className="highlight">
+            Excellent location {hotel.distance} from center
+          </div>
+          <div className="highlight_1">
+            Book a stay over ${hotel.cheapestPrice} and get a free airport taxi
+          </div>
 
           <h2 className="price">
             {hotel.price} {hotel.nightStay}
@@ -66,8 +80,8 @@ const Detail = () => {
           >
             {/* Mô tả khách sạn */}
             <div className="hotelInfo">
-              <h2>Stay in the heart of {hotel.city}</h2>
-              <p>{hotel.description}</p>
+              <h2>{hotel.name}</h2>
+              <p>{hotel.desc}</p>
             </div>
 
             {/* Giá & Đặt phòng */}
@@ -83,10 +97,15 @@ const Detail = () => {
                 >
                   <p style={{ fontSize: "30px", fontWeight: "bold" }}>
                     ${hotel.nine_night_price}
-                    <span style={{ fontWeight: "normal" }}> (9 nights)</span>
+                    <span style={{ fontWeight: "normal" }}>
+                      {" "}
+                      {hotel.cheapestPrice}
+                    </span>
                   </p>
                 </div>
-                <button className="bookNowBtn">Reserve or Book Now!</button>
+                <button className="bookNowBtn" onClick={handleCheckout}>
+                  Reserve or Book Now!
+                </button>
               </div>
             </div>
           </div>

@@ -37,7 +37,7 @@ const NavBar = () => {
   const handleLogout = () => {
     setCurrentUser(null);
     alert("Logout successful!");
-    navigate("/");
+    navigate("/register");
   };
 
   return (

@@ -7,6 +7,7 @@ const Hotel = require("../models/Hotel");
 const Footer = require("../models/footer");
 const Search = require("../models/search");
 const Room = require("../models/Room");
+const Booking = require("../models/Booking");
 exports.postUser = (req, res) => {
   const { username, password, fullName, phoneNumber, email } = req.body;
 
@@ -203,4 +204,93 @@ exports.getRoom = (req, res) => {
     .catch((error) => {
       res.status(500).json({ error: error.message });
     });
+};
+
+// Lấy dữ liệu hotel từ mongodb compass theo hotelID
+exports.getHotelById = (req, res) => {
+  const { id } = req.params;
+  Hotel.findById(id)
+    .then((hotel) => {
+      if (!hotel) {
+        return res.status(404).json({ message: "Hotel not found" });
+      }
+      res.status(200).json(hotel);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
+exports.postBooking = (req, res) => {
+  const {
+    userInfo,
+    hotelId,
+    roomIds,
+    startDate,
+    endDate,
+    paymentMethod,
+    totalPrice,
+  } = req.body;
+
+  console.log("Booking data:", req.body);
+
+  const newBooking = new Booking({
+    userInfo,
+    hotelId,
+    roomIds,
+    startDate,
+    endDate,
+    paymentMethod,
+    totalPrice,
+  });
+
+  newBooking
+    .save()
+    .then(() => {
+      res.status(201).json({ message: "Booking created successfully" });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
+// lấy rooms của hotel từ mongodb compass
+exports.getRoomsByHotelId = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const hotel = await Hotel.findById(id);
+    if (!hotel || !hotel.rooms || !hotel.rooms.length) {
+      return res.status(404).json({ error: "No rooms found for this hotel" });
+    }
+
+    const rooms = await Room.find({ _id: { $in: hotel.rooms } });
+
+    res.status(200).json(rooms);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Lấy dữ liệu booking từ mongodb compass
+exports.getBookingByUser = async (req, res) => {
+  try {
+    const { userId, username } = req.query;
+
+    if (!userId && !username) {
+      return res.status(400).json({ error: "Missing userId or username" });
+    }
+
+    const query = userId
+      ? { "userInfo.userId": userId }
+      : { "userInfo.fullName": username };
+
+    const bookings = await Booking.find(query)
+      .populate("hotelId")
+      .populate("roomIds");
+
+    res.status(200).json(bookings);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 };
