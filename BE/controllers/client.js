@@ -29,6 +29,53 @@ exports.postUser = (req, res) => {
     });
 };
 
+// post hotel mới
+exports.postHotel = (req, res) => {
+  const { name, type, city, address, distance, photos, desc, rating } =
+    req.body;
+
+  const newHotel = new Hotel({
+    name,
+    type,
+    city,
+    address,
+    distance,
+    photos,
+    desc,
+    rating,
+  });
+
+  newHotel
+    .save()
+    .then(() => {
+      res.status(201).json({ message: "Hotel created successfully" });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
+// post room moi
+exports.postRoom = (req, res) => {
+  const { name, type, price, maxPeople, desc, roomNumbers } = req.body;
+  const newRoom = new Room({
+    name,
+    type,
+    price,
+    maxPeople,
+    desc,
+    roomNumbers,
+  });
+  newRoom
+    .save()
+    .then(() => {
+      res.status(201).json({ message: "Room created successfully" });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
 exports.getLogin = (req, res) => {
   const { username, password } = req.body;
 
@@ -121,6 +168,17 @@ exports.getHotel = (req, res) => {
   Hotel.find()
     .sort({ rating: -1 })
     .limit(3)
+    .then((cities) => {
+      res.status(200).json(cities);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
+// lấy dữ liệu hotel tất cả
+exports.getAllHotel = (req, res) => {
+  Hotel.find()
     .then((cities) => {
       res.status(200).json(cities);
     })
@@ -290,6 +348,38 @@ exports.getBookingByUser = async (req, res) => {
       .populate("roomIds");
 
     res.status(200).json(bookings);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Xóa hotel theo id
+exports.deleteHotel = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const hotel = await Hotel.findByIdAndDelete(id);
+    if (!hotel) {
+      return res.status(404).json({ error: "Hotel not found" });
+    }
+
+    res.status(200).json({ message: "Hotel deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Xóa room theo id
+exports.deleteRoom = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const room = await Room.findByIdAndDelete(id);
+    if (!room) {
+      return res.status(404).json({ error: "Room not found" });
+    }
+
+    res.status(200).json({ message: "Room deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

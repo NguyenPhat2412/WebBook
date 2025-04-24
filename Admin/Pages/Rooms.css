@@ -40,3 +40,95 @@
   flex: 3;
   text-align: left;
 }
+
+.new_hotel {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.new-room-list {
+  padding: 20px;
+}
+
+.new-room-behind div {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.new-room-behind div input {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.new-room-behind div input:active {
+  border-bottom: 1px solid #8b5cf6;
+}
+.new-room-behind div input:focus {
+  border-bottom: 1px solid #8b5cf6;
+}
+.new-room-behind div textarea {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.new-room-behind div select {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.new-room-behind span {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-room-behind span .checkbox {
+  width: 10%;
+
+  left: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.rooms-select div button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 40px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rooms-select select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.new-room-list .button-check button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 40px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.room-list input {
+  width: 60%;
+  border-bottom: 1px solid #e5e7eb;
+}
+.room-list textarea {
+  width: 60%;
+  border-bottom: 1px solid #e5e7eb;
+}

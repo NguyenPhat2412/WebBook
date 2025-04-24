@@ -28,6 +28,9 @@ router.get("/type", userController.getType);
 // Đường dẫn lấy dữ liệu hotel từ mongodb compass
 router.get("/hotel_list", userController.getHotel);
 
+// Đường dẫn post dữ liệu hotel từ mongodb compass
+router.post("/hotel_post", userController.postHotel);
+
 // Đường dẫn lấy dữ liệu footer từ mongodb compass
 router.get("/footer", userController.getFooter);
 
@@ -36,6 +39,9 @@ router.get("/search", userController.getSearch);
 
 // Đường dẫn lấy room từ mongodb compass
 router.get("/room", userController.getRoom);
+
+// Đường dẫn post room từ mongodb compass
+router.post("/room_post", userController.postRoom);
 
 // Đường dẫn lấy dữ liệu room từ mongo compass
 router.get("/room/:id", userController.getRoomsByHotelId);
@@ -51,5 +57,14 @@ router.post("/booking", userController.postBooking);
 
 // Đường dẫn lấy dữ liệu booking từ mongodb compass
 router.get("/booking/user", userController.getBookingByUser);
+
+// Đường dẫn xóa hotel
+router.delete("/hotel/:id", userController.deleteHotel);
+
+// Đường dẫn xóa room
+router.delete("/room/:id", userController.deleteRoom);
+
+// Đường dẫn lấy tất cả hotel\
+router.get("/hotel", userController.getAllHotel);
 
 module.exports = router;

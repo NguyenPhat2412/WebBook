@@ -4,184 +4,195 @@ import "./Rooms.css";
 
 const NewHotel = () => {
   const [user, setUser] = useState(null);
-  const [bookings, setBookings] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [numberUser, setNumberUser] = useState(0);
-  const [numberOrders, setNumberOrders] = useState(0);
-  const [numberEarnings, setNumberEarnings] = useState(0);
-  const [numberBalance, setNumberBalance] = useState(0);
-  const [rooms, setRooms] = useState([]);
 
-  const bookingsPerPage = 6;
+  const [name, setName] = useState("");
+  const [city, setCity] = useState("");
+  const [distance, setDistance] = useState("");
+  const [desc, setDesc] = useState("");
+  const [type, setType] = useState("");
+  const [address, setAddress] = useState("");
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [featured, setFeatured] = useState(false);
+  const [rooms, setRooms] = useState("");
+  const [photos, setPhotos] = useState("");
 
-  // Lấy thông tin người dùng
   useEffect(() => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
-      .then((data) => setUser(...data))
+      .then((data) => setUser(data[0])) // giả sử chỉ cần lấy 1 user
       .catch((err) => console.error("Lỗi lấy user:", err));
   }, []);
 
-  // Lấy số lượng người dùng
-  useEffect(() => {
-    fetch("http://localhost:5000/api/users")
-      .then((res) => res.json())
-      .then((data) => setNumberUser(data.length))
-      .catch((err) => console.error("Lỗi lấy số lượng người dùng:", err));
-  }, []);
+  const handleSubmit = async () => {
+    const newHotel = {
+      name,
+      city,
+      distance,
+      desc,
+      type,
+      address,
+      title,
+      price: parseFloat(price),
+      featured,
+      rooms,
+      photos: photos.split(",").map((url) => url.trim()),
+    };
 
-  // Lấy booking khi đã có user
-  useEffect(() => {
-    if (!user?._id) return;
-    fetch(`http://localhost:5000/api/booking/user?userId=${user._id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setBookings(data);
-        setNumberOrders(data.length);
-        const totalEarnings = data.reduce(
-          (acc, booking) => acc + booking.totalPrice,
-          0
-        );
-        setNumberEarnings(totalEarnings);
-        const totalBalance = data.reduce(
-          (acc, booking) => acc + booking.totalPrice,
-          0
-        );
-        setNumberBalance(totalBalance);
-      })
-      .catch((err) => console.error("Lỗi lấy bookings:", err));
-  }, [user]);
-
-  // lấy tất cả room
-  useEffect(() => {
-    fetch("http://localhost:5000/api/room")
-      .then((res) => res.json())
-      .then((data) => {
-        setRooms(data);
-        console.log(data);
-      })
-      .catch((err) => console.error("Lỗi lấy room:", err));
-  }, []);
-
-  // Phân trang
-  const indexOfLastBooking = currentPage * bookingsPerPage;
-  const indexOfFirstBooking = indexOfLastBooking - bookingsPerPage;
-  const currentRooms = rooms.slice(indexOfFirstBooking, indexOfLastBooking);
-  const totalPages = Math.ceil(rooms.length / bookingsPerPage);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    try {
+      const res = await fetch("http://localhost:5000/api/hotel_post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newHotel),
+      });
+      const result = await res.json();
+      if (!res.ok) {
+        throw new Error(result.message || "Failed to add hotel");
+      }
+      alert("Đã thêm phòng mới thành công!");
+      console.log(user);
+    } catch (err) {
+      console.error("Lỗi khi thêm phòng:", err);
+    }
+    setName("");
+    setCity("");
+    setDistance("");
+    setDesc("");
+    setType("");
+    setAddress("");
+    setTitle("");
+    setPrice("");
+    setFeatured(false);
+    setRooms("");
+    setPhotos("");
+  };
 
   return (
-    <div className="dashboard-container-main min-h-screen flex bg-white ">
+    <div className="dashboard-container-main min-h-screen flex bg-white">
       <div className="col-span-1 md:col-span-1">
         <NavBar />
       </div>
 
       <div className="col-span-1 md:col-span-4 p-6 dashboard-container">
-        <nav className="navbar">
-          <ul className="flex justify-between p-4 rounded gap-20">
-            <li className="dashboard-navbar-list text-blue-500 hover:text-blue-700 uppercase font-semibold w-70 h-30 shadow-md rounded-lg ">
-              Users
-              <p>{numberUser}</p>
-              <i className="fa-solid fa-users text-red-500 text-xl"></i>
-            </li>
-            <li className="dashboard-navbar-list text-blue-500 hover:text-blue-700 w-70 h-30 shadow-md rounded-lg uppercase font-semibold">
-              Orders
-              <p>{numberOrders}</p>
-              <i className="fa-solid fa-truck text-yellow-500 text-xl"></i>
-            </li>
-            <li className="dashboard-navbar-list text-blue-500 hover:text-blue-700 w-70 h-30 shadow-md rounded-lg uppercase font-semibold">
-              Earnings
-              <p>${numberEarnings}</p>
-              <i className="fa-solid fa-money-bill text-green-500 text-xl"></i>
-            </li>
-            <li className="dashboard-navbar-list text-blue-500 hover:text-blue-700 w-70 h-30 shadow-md rounded-lg uppercase font-semibold">
-              Balance
-              <p>${numberBalance}</p>
-              <i className="fa-solid fa-scale-balanced text-purple-500 text-xl"></i>
-            </li>
-          </ul>
-        </nav>
-
-        <div className="transactions bg-white shadow-md rounded-lg p-6 shadow-md mt-6">
-          <h1 className="text-2xl font-bold mb-4">Rooms List</h1>
-          {rooms.length === 0 ? (
-            <p className="text-gray-500">No bookings found.</p>
-          ) : (
-            <div className="transactions-list overflow-x-auto">
-              <table className="min-w-full text-sm text-left border">
-                <thead className="bg-gray-200 text-gray-700 text-xl">
-                  <tr>
-                    <th className="py-4 px-6 border">STT</th>
-                    <th className="py-4 px-6 border">__ID</th>
-                    <th className="py-4 px-6 border">__V</th>
-                    <th className="py-4 px-6 border">CreateAt</th>
-                    <th className="py-4 px-6 border">Description</th>
-                    <th className="py-4 px-6 border">Max People</th>
-                    <th className="py-4 px-6 border">Price</th>
-                    <th className="py-4 px-6 border">Room Numbers</th>
-                    <th className="py-4 px-6 border">Title</th>
-                    <th className="py-4 px-6 border">UpdateAt</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {currentRooms.map((b, idx) => (
-                    <tr key={b._id} className="border-t">
-                      <td className="py-2 px-3 border">{idx + 1}</td>
-                      <td className="py-2 px-3 border">{b._id}</td>
-                      <td className="py-2 px-3 border">{b.__v}</td>
-                      <td className="py-2 px-3 border">{b.createdAt}</td>
-                      <td className="py-2 px-3 border">{b.desc}</td>
-                      <td className="py-2 px-3 border">{b.maxPeople}</td>
-                      <td className="py-2 px-3 border">{b.price}</td>
-                      <td className="py-2 px-3 border">{b.roomNumbers}</td>
-                      <td className="py-2 px-3 border">{b.title}</td>
-                      <td className="py-2 px-3 border">{b.updatedAt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div className="dashboard-page flex justify-center mt-4 space-x-2">
-                <button
-                  onClick={() => paginate(Math.max(currentPage - 1, 1))}
-                  disabled={currentPage === 1}
-                  className={`px-3 py-1 rounded border ${
-                    currentPage === 1
-                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-white text-blue-500"
-                  }`}
-                >
-                  <i className="fa-solid fa-square-caret-left w-10 "></i>
-                </button>
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <button
-                    key={i + 1}
-                    onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1 rounded border w-10 ${
-                      currentPage === i + 1
-                        ? "bg-blue-500 text-white"
-                        : "bg-white text-blue-500"
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
-                <button
-                  onClick={() =>
-                    paginate(Math.min(currentPage + 1, totalPages))
-                  }
-                  disabled={currentPage === totalPages}
-                  className={`px-3 py-1 rounded border w-10 ${
-                    currentPage === totalPages
-                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-white text-blue-500"
-                  }`}
-                >
-                  <i className="fa-solid fa-square-caret-right"></i>
-                </button>
-              </div>
+        <div className="new_hotel shadow-md bg-white p-4 rounded-lg mb-4">
+          <h1 className="text-2xl font-bold mb-4">Thêm phòng mới</h1>
+        </div>
+        <div className="new-room-list bg-white p-6 rounded-lg shadow-md grid grid-cols-2">
+          <div className="new-room-behind flex flex-col gap-4 w-1/2 mr-4">
+            <div>
+              <label>Name</label>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="My Hotel"
+              />
             </div>
-          )}
+
+            <div>
+              <label>City</label>
+              <input
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                placeholder="New York"
+              />
+            </div>
+            <div>
+              <label>Distance from City Center</label>
+              <input
+                value={distance}
+                onChange={(e) => setDistance(e.target.value)}
+                placeholder="500"
+              />
+            </div>
+
+            <div>
+              <label>Description</label>
+              <input
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+                placeholder="My Hotel"
+              />
+            </div>
+
+            <div>
+              <label>Images (ngăn cách dấu phẩy)</label>
+              <textarea
+                value={photos}
+                onChange={(e) => setPhotos(e.target.value)}
+                placeholder="url1, url2, url3"
+              />
+            </div>
+          </div>
+
+          <div className="new-room-behind flex flex-col gap-4 w-1/2">
+            <div>
+              <label>Type</label>
+              <input
+                value={type}
+                onChange={(e) => setType(e.target.value)}
+                placeholder="Hotel"
+              />
+            </div>
+            <div>
+              <label>Address</label>
+              <input
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                placeholder="Ha Noi, Viet Nam"
+              />
+            </div>
+            <div>
+              <label>Title</label>
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="The best Hotel"
+              />
+            </div>
+            <div>
+              <label>Price</label>
+              <input
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                placeholder="100"
+              />
+            </div>
+            <span>
+              <label>Featured</label>
+              <input
+                type="checkbox"
+                checked={featured}
+                className="checkbox"
+                onChange={(e) => setFeatured(e.target.checked)}
+              />
+            </span>
+          </div>
+          <div className="rooms-select ">
+            <div className="flex flex-col gap-4 w-1/2">
+              <label>Rooms</label>
+              <select
+                value={rooms}
+                onChange={(e) => setRooms(e.target.value)}
+                className="select-room"
+              >
+                <option value="1">2 Bed Room</option>
+                <option value="2">1 Bed Room</option>
+                <option value="3">Premier City View Room</option>
+                <option value="4">Basement Double Room</option>
+                <option value="5">Budget Double Room</option>
+                <option value="6">Superior basement room</option>
+                <option value="7">Superior basement room</option>
+                <option value="8">Deluxe Window</option>
+              </select>
+            </div>
+            <div>
+              <button className="btn-send" onClick={handleSubmit}>
+                Send
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

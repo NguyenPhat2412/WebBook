@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/navbar";
 import "./Rooms.css";
-
+import { useNavigate } from "react-router-dom";
 const Rooms = () => {
   const [user, setUser] = useState(null);
   const [bookings, setBookings] = useState([]);
@@ -12,6 +12,7 @@ const Rooms = () => {
   const [numberBalance, setNumberBalance] = useState(0);
   const [rooms, setRooms] = useState([]);
 
+  const navigate = useNavigate();
   const bookingsPerPage = 6;
 
   // Lấy thông tin người dùng
@@ -37,6 +38,7 @@ const Rooms = () => {
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
+        console.log(bookings);
         setNumberOrders(data.length);
         const totalEarnings = data.reduce(
           (acc, booking) => acc + booking.totalPrice,
@@ -62,6 +64,24 @@ const Rooms = () => {
       })
       .catch((err) => console.error("Lỗi lấy room:", err));
   }, []);
+
+  const handleAddRoom = () => {
+    navigate("/new_room");
+  };
+
+  // Xóa room theo id
+
+  const deleteRoom = async (id) => {
+    const response = await fetch(`http://localhost:5000/api/room/${id}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      const updatedRooms = rooms.filter((room) => room._id !== id);
+      setRooms(updatedRooms);
+    } else {
+      console.error("Failed to delete room");
+    }
+  };
 
   // Phân trang
   const indexOfLastBooking = currentPage * bookingsPerPage;
@@ -104,7 +124,24 @@ const Rooms = () => {
         </nav>
 
         <div className="transactions bg-white shadow-md rounded-lg p-6 shadow-md mt-6">
-          <h1 className="text-2xl font-bold mb-4">Rooms List</h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl font-bold mb-4">Rooms List</h1>
+            <button
+              style={{
+                backgroundColor: "#4CAF50",
+                color: "white",
+                padding: "10px 20px",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                marginBottom: "10px",
+              }}
+              onClick={handleAddRoom}
+            >
+              Add New
+            </button>
+          </div>
+
           {rooms.length === 0 ? (
             <p className="text-gray-500">No bookings found.</p>
           ) : (
@@ -122,6 +159,7 @@ const Rooms = () => {
                     <th className="py-4 px-6 border">Room Numbers</th>
                     <th className="py-4 px-6 border">Title</th>
                     <th className="py-4 px-6 border">UpdateAt</th>
+                    <th className="py-4 px-6 border">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -137,6 +175,17 @@ const Rooms = () => {
                       <td className="py-2 px-3 border">{b.roomNumbers}</td>
                       <td className="py-2 px-3 border">{b.title}</td>
                       <td className="py-2 px-3 border">{b.updatedAt}</td>
+                      <td className="py-2 px-3 border">
+                        <button
+                          onClick={() => deleteRoom(b._id)}
+                          className="bg-red-500 text-white px-2 py-1 rounded"
+                          style={{
+                            padding: "10px 20px",
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

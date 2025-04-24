@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/navbar";
 import "../components/Dashboard/Dashboard.css";
+import { useNavigate } from "react-router-dom";
 
 const Hotels = () => {
   const [user, setUser] = useState(null);
@@ -11,6 +12,8 @@ const Hotels = () => {
   const [numberOrders, setNumberOrders] = useState(0);
   const [numberEarnings, setNumberEarnings] = useState(0);
   const [numberBalance, setNumberBalance] = useState(0);
+
+  const navigate = useNavigate();
 
   const bookingsPerPage = 3;
 
@@ -37,6 +40,7 @@ const Hotels = () => {
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
+        console.log(bookings);
         setNumberOrders(data.length);
         const totalEarnings = data.reduce(
           (acc, booking) => acc + booking.totalPrice,
@@ -54,13 +58,30 @@ const Hotels = () => {
 
   // lấy tất cả hotel
   useEffect(() => {
-    fetch("http://localhost:5000/api/hotel_list")
+    fetch("http://localhost:5000/api/hotel")
       .then((res) => res.json())
       .then((data) => {
         setHotels(data);
       })
       .catch((err) => console.error("Lỗi lấy hotels:", err));
   }, []);
+
+  // Delete hotel
+  const handleDeleteHotel = (hotelId) => {
+    fetch(`http://localhost:5000/api/hotel/${hotelId}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setHotels(hotels.filter((hotel) => hotel._id !== hotelId));
+      })
+      .catch((err) => console.error("Lỗi xóa khách sạn:", err));
+  };
+
+  const handleAddHotel = () => {
+    navigate("/new_hotel");
+  };
+
   // Phân trang
   const indexOfLastBooking = currentPage * bookingsPerPage;
   const indexOfFirstBooking = indexOfLastBooking - bookingsPerPage;
@@ -102,7 +123,24 @@ const Hotels = () => {
         </nav>
 
         <div className="transactions bg-white shadow-md rounded-lg p-6 shadow-md mt-6">
-          <h1 className="text-2xl font-bold mb-4">Last Transactions</h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl font-bold mb-4">Hotels Last</h1>
+            <button
+              style={{
+                backgroundColor: "#4CAF50",
+                color: "white",
+                padding: "10px 20px",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                marginBottom: "10px",
+              }}
+              onClick={handleAddHotel}
+            >
+              Add New
+            </button>
+          </div>
+
           {hotels.length === 0 ? (
             <p className="text-gray-500">No bookings found.</p>
           ) : (
@@ -119,6 +157,7 @@ const Hotels = () => {
                     <th className="py-4 px-6 border">Distance</th>
                     <th className="py-4 px-6 border">Type</th>
                     <th className="py-4 px-6 border">Rating</th>
+                    <th className="py-4 px-6 border">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -135,6 +174,22 @@ const Hotels = () => {
                       </td>
                       <td className="py-2 px-3 border">{b.type}</td>
                       <td className="py-2 px-3 border">{b.rating}</td>
+                      <td className="py-2 px-3 border">
+                        <button
+                          onClick={() => handleDeleteHotel(b._id)}
+                          className="bg-red-500 text-white px-4 py-2 rounded"
+                          style={{
+                            padding: "10px 20px",
+                            backgroundColor: "#f44336",
+                            color: "white",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
