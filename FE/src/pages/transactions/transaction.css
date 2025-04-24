@@ -25,7 +25,7 @@
 }
 
 .transaction-table thead {
-  background-color: #f2f2f2;
+  background-color: #4ce2db;
 }
 
 .transaction-table th,
@@ -42,7 +42,7 @@
 }
 
 .transaction-table tr:hover {
-  background-color: #f9f9f9;
+  background-color: #7cebd3;
 }
 
 .transaction-table td {

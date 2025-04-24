@@ -12,7 +12,7 @@ const Transactions = () => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
       .then((data) => {
-        setUser(...data); // không destructuring nếu không phải mảng
+        setUser(...data);
       })
       .catch((err) => console.error("Lỗi lấy user:", err));
   }, []);
@@ -38,6 +38,7 @@ const Transactions = () => {
           <table className="transaction-table">
             <thead>
               <tr>
+                <th>STT</th>
                 <th>ID</th>
                 <th>Hotel</th>
                 <th>Room Numbers</th>
@@ -50,13 +51,10 @@ const Transactions = () => {
             <tbody>
               {bookings.map((b) => (
                 <tr key={b._id}>
+                  <td>{bookings.indexOf(b) + 1}</td>
                   <td>{b._id}</td>
                   <td>{b.hotelId?.name || "N/A"}</td>
-                  <td>
-                    {b.roomIds
-                      .flat() // vì bạn có dạng [[101], [203]]
-                      .join(", ")}
-                  </td>
+                  <td>{b.roomIds.flat().join(", ")}</td>
                   <td>{new Date(b.startDate).toLocaleDateString()}</td>
                   <td>{new Date(b.endDate).toLocaleDateString()}</td>
                   <td>{b.paymentMethod}</td>
