@@ -17,6 +17,25 @@ const NewHotel = () => {
   const [rooms, setRooms] = useState("");
   const [photos, setPhotos] = useState("");
 
+  const [errors, setErrors] = useState({});
+
+  // validate dữ liệu
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) newErrors.name = "Name is required";
+    if (!city.trim()) newErrors.city = "City is required";
+    if (!distance.trim()) newErrors.distance = "Distance is required";
+    if (!desc.trim()) newErrors.desc = "Description is required";
+    if (!type.trim()) newErrors.type = "Type is required";
+    if (!address.trim()) newErrors.address = "Address is required";
+    if (!title.trim()) newErrors.title = "Title is required";
+    if (!price) newErrors.price = "Price is required";
+    if (!rooms.trim()) newErrors.rooms = "Rooms is required";
+    if (!photos.trim()) newErrors.photos = "Photos are required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   useEffect(() => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
@@ -24,7 +43,9 @@ const NewHotel = () => {
       .catch((err) => console.error("Lỗi lấy user:", err));
   }, []);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validate()) return;
     const newHotel = {
       name,
       city,
@@ -88,6 +109,9 @@ const NewHotel = () => {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="My Hotel"
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
             </div>
 
             <div>
@@ -97,6 +121,9 @@ const NewHotel = () => {
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="New York"
               />
+              {errors.city && (
+                <p className="text-red-500 text-sm">{errors.city}</p>
+              )}
             </div>
             <div>
               <label>Distance from City Center</label>
@@ -105,6 +132,9 @@ const NewHotel = () => {
                 onChange={(e) => setDistance(e.target.value)}
                 placeholder="500"
               />
+              {errors.distance && (
+                <p className="text-red-500 text-sm">{errors.distance}</p>
+              )}
             </div>
 
             <div>
@@ -114,6 +144,9 @@ const NewHotel = () => {
                 onChange={(e) => setDesc(e.target.value)}
                 placeholder="My Hotel"
               />
+              {errors.desc && (
+                <p className="text-red-500 text-sm">{errors.desc}</p>
+              )}
             </div>
 
             <div>
@@ -123,6 +156,9 @@ const NewHotel = () => {
                 onChange={(e) => setPhotos(e.target.value)}
                 placeholder="url1, url2, url3"
               />
+              {errors.photos && (
+                <p className="text-red-500 text-sm">{errors.photos}</p>
+              )}
             </div>
           </div>
 
@@ -134,6 +170,9 @@ const NewHotel = () => {
                 onChange={(e) => setType(e.target.value)}
                 placeholder="Hotel"
               />
+              {errors.type && (
+                <p className="text-red-500 text-sm">{errors.type}</p>
+              )}
             </div>
             <div>
               <label>Address</label>
@@ -142,6 +181,9 @@ const NewHotel = () => {
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Ha Noi, Viet Nam"
               />
+              {errors.address && (
+                <p className="text-red-500 text-sm">{errors.address}</p>
+              )}
             </div>
             <div>
               <label>Title</label>
@@ -150,6 +192,9 @@ const NewHotel = () => {
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="The best Hotel"
               />
+              {errors.title && (
+                <p className="text-red-500 text-sm">{errors.title}</p>
+              )}
             </div>
             <div>
               <label>Price</label>
@@ -158,6 +203,9 @@ const NewHotel = () => {
                 onChange={(e) => setPrice(e.target.value)}
                 placeholder="100"
               />
+              {errors.price && (
+                <p className="text-red-500 text-sm">{errors.price}</p>
+              )}
             </div>
             <span>
               <label>Featured</label>
@@ -167,6 +215,9 @@ const NewHotel = () => {
                 className="checkbox"
                 onChange={(e) => setFeatured(e.target.checked)}
               />
+              {errors.featured && (
+                <p className="text-red-500 text-sm">{errors.featured}</p>
+              )}
             </span>
           </div>
           <div className="rooms-select ">

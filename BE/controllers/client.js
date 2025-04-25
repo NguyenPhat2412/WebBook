@@ -384,3 +384,18 @@ exports.deleteRoom = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// xóa dữ liệu user theo id
+exports.getUserById = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await User.findByIdAndDelete(id);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.status(200).json({ message: "User deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

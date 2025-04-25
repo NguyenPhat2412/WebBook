@@ -90,6 +90,10 @@ const Hotels = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const paginateRange = 1;
+  const startPage = Math.max(1, currentPage - Math.floor(paginateRange / 2));
+  const endPage = Math.min(totalPages, startPage + paginateRange - 1);
+
   return (
     <div className="dashboard-container-main min-h-screen flex bg-white ">
       <div className="col-span-1 md:col-span-1">
@@ -163,7 +167,9 @@ const Hotels = () => {
                 <tbody>
                   {currentHotels.map((b, idx) => (
                     <tr key={b._id} className="border-t">
-                      <td className="py-2 px-3 border">{idx + 1}</td>
+                      <td className="py-2 px-3 border">
+                        {(currentPage - 1) * bookingsPerPage + idx + 1}
+                      </td>
                       <td className="py-2 px-3 border">{b._id}</td>
                       <td className="py-2 px-3 border">{b.address}</td>
                       <td className="py-2 px-3 border">{b.cheapestPrice}</td>
@@ -206,19 +212,22 @@ const Hotels = () => {
                 >
                   <i className="fa-solid fa-square-caret-left w-10 "></i>
                 </button>
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <button
-                    key={i + 1}
-                    onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1 rounded border w-10 ${
-                      currentPage === i + 1
-                        ? "bg-blue-500 text-white"
-                        : "bg-white text-blue-500"
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
+                {Array.from({ length: endPage - startPage + 1 }, (_, i) => {
+                  const pageNumber = startPage + i;
+                  return (
+                    <button
+                      key={pageNumber}
+                      onClick={() => paginate(pageNumber)}
+                      className={`px-3 py-1 rounded border w-10 ${
+                        currentPage === pageNumber
+                          ? "bg-blue-500 text-white"
+                          : "bg-white text-blue-500"
+                      }`}
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
                 <button
                   onClick={() =>
                     paginate(Math.min(currentPage + 1, totalPages))

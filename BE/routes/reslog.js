@@ -67,4 +67,6 @@ router.delete("/room/:id", userController.deleteRoom);
 // Đường dẫn lấy tất cả hotel\
 router.get("/hotel", userController.getAllHotel);
 
+// Đường dẫn xóa user theo id
+router.delete("/user/:id", userController.getUserById);
 module.exports = router;

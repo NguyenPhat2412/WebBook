@@ -12,6 +12,22 @@ const NewRoomForm = () => {
   const [desc, setDesc] = useState("");
   const [roomNumbers, setRoomNumbers] = useState("");
 
+  const [errors, setErrors] = useState({});
+
+  // validate dữ liệu
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) newErrors.name = "Name is required";
+    if (!type.trim()) newErrors.type = "Type is required";
+    if (!price) newErrors.price = "Price is required";
+    if (!maxPeople) newErrors.maxPeople = "Max People is required";
+    if (!desc.trim()) newErrors.desc = "Description is required";
+    if (!roomNumbers.trim())
+      newErrors.roomNumbers = "Room Numbers are required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   useEffect(() => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
@@ -20,6 +36,7 @@ const NewRoomForm = () => {
   }, []);
 
   const handleSubmit = async () => {
+    if (!validate()) return;
     const newRoom = {
       name,
       type,
@@ -76,6 +93,7 @@ const NewRoomForm = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Room Name"
             />
+            {errors.name && <p className="text-red-500">{errors.name}</p>}
 
             <label>Type</label>
             <input
@@ -83,6 +101,7 @@ const NewRoomForm = () => {
               onChange={(e) => setType(e.target.value)}
               placeholder="Deluxe / Suite / Standard"
             />
+            {errors.type && <p className="text-red-500">{errors.type}</p>}
 
             <label>Price</label>
             <input
@@ -91,6 +110,7 @@ const NewRoomForm = () => {
               onChange={(e) => setPrice(e.target.value)}
               placeholder="100"
             />
+            {errors.price && <p className="text-red-500">{errors.price}</p>}
           </div>
 
           <div className="room-list flex flex-col gap-4">
@@ -101,6 +121,9 @@ const NewRoomForm = () => {
               onChange={(e) => setMaxPeople(e.target.value)}
               placeholder="2"
             />
+            {errors.maxPeople && (
+              <p className="text-red-500">{errors.maxPeople}</p>
+            )}
 
             <label>Description</label>
             <textarea
@@ -108,6 +131,7 @@ const NewRoomForm = () => {
               onChange={(e) => setDesc(e.target.value)}
               placeholder="Description of the room"
             />
+            {errors.desc && <p className="text-red-500">{errors.desc}</p>}
 
             <label>Room Numbers (phân cách bằng dấu phẩy)</label>
             <input
@@ -115,6 +139,9 @@ const NewRoomForm = () => {
               onChange={(e) => setRoomNumbers(e.target.value)}
               placeholder="101, 102, 201"
             />
+            {errors.roomNumbers && (
+              <p className="text-red-500">{errors.roomNumbers}</p>
+            )}
           </div>
 
           <div className="button-check col-span-2 mt-4">

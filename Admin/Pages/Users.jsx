@@ -13,7 +13,7 @@ const Users = () => {
   const [numberEarnings, setNumberEarnings] = useState(0);
   const [numberBalance, setNumberBalance] = useState(0);
 
-  const bookingsPerPage = 8;
+  const bookingsPerPage = 6;
 
   // Lấy thông tin người dùng
   useEffect(() => {
@@ -57,16 +57,34 @@ const Users = () => {
       .catch((err) => console.error("Lỗi lấy bookings:", err));
   }, [user]);
 
+  // Delete user theo id
+  const handleDeleteUser = async (userId) => {
+    fetch(`http://localhost:5000/api/user/${userId}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setUsers(users.filter((user) => user._id !== userId));
+          alert("User deleted successfully!");
+        } else {
+          alert("Failed to delete user.");
+        }
+      })
+      .catch((err) => console.error("Lỗi xóa user:", err));
+  };
+
   // Phân trang
   const indexOfLastBooking = currentPage * bookingsPerPage;
   const indexOfFirstBooking = indexOfLastBooking - bookingsPerPage;
-  const currentBookings = bookings.slice(
-    indexOfFirstBooking,
-    indexOfLastBooking
-  );
-  const totalPages = Math.ceil(bookings.length / bookingsPerPage);
+  const currentUsers = users.slice(indexOfFirstBooking, indexOfLastBooking);
+  const totalPages = Math.ceil(users.length / bookingsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const paginateRange = 1;
+  const startPage = Math.max(1, currentPage - Math.floor(paginateRange / 2));
+  const endPage = Math.min(totalPages, startPage + paginateRange - 1);
 
   return (
     <div className="dashboard-container-main min-h-screen flex bg-white ">
@@ -117,12 +135,15 @@ const Users = () => {
                     <th className="py-4 px-6 border">Full Name</th>
                     <th className="py-4 px-6 border">Email</th>
                     <th className="py-4 px-6 border">isAdmin</th>
+                    <th className="py-4 px-6 border">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {users.map((b, idx) => (
+                  {currentUsers.map((b, idx) => (
                     <tr key={b._id} className="border-t">
-                      <td className="py-2 px-3 border">{idx + 1}</td>
+                      <td className="py-2 px-3 border">
+                        {(currentPage - 1) * bookingsPerPage + idx + 1}
+                      </td>
                       <td className="py-2 px-3 border">{b.username}</td>
                       <td className="py-2 px-3 border">{b._id}</td>
                       <td className="py-2 px-3 border">
@@ -135,6 +156,19 @@ const Users = () => {
                       <td className="py-2 px-3 border">{b.email}</td>
                       <td className="py-2 px-3 border">
                         {b.isAdmin ? "Yes" : "No"}
+                      </td>
+                      <td className="py-2 px-3 border">
+                        <button
+                          style={{
+                            backgroundColor: "redcó",
+                            color: "white",
+                            padding: "10px 20px",
+                          }}
+                          onClick={() => handleDeleteUser(b._id)}
+                          className="bg-red-500 text-white px-4 py-2 rounded"
+                        >
+                          Delete
+                        </button>
                       </td>
                     </tr>
                   ))}
@@ -152,19 +186,22 @@ const Users = () => {
                 >
                   <i className="fa-solid fa-square-caret-left w-10 "></i>
                 </button>
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <button
-                    key={i + 1}
-                    onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1 rounded border w-10 ${
-                      currentPage === i + 1
-                        ? "bg-blue-500 text-white"
-                        : "bg-white text-blue-500"
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
+                {Array.from({ length: endPage - startPage + 1 }, (_, i) => {
+                  const pageNumber = startPage + i;
+                  return (
+                    <button
+                      key={pageNumber}
+                      onClick={() => paginate(pageNumber)}
+                      className={`px-3 py-1 rounded border w-10 ${
+                        currentPage === pageNumber
+                          ? "bg-blue-500 text-white"
+                          : "bg-white text-blue-500"
+                      }`}
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
                 <button
                   onClick={() =>
                     paginate(Math.min(currentPage + 1, totalPages))

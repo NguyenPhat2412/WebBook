@@ -1,0 +1,2402 @@
+[
+  {
+    "_id": {
+      "$oid": "07a62c57-4db4-4884-ad32-27e99d38fb77"
+    },
+    "address": "Ancient Town, 592 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 235,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "1",
+    "featured": true,
+    "name": "HA NOI Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/e0da0f4c-8385-4fbc-8bef-67967961ac59.jpg",
+      "https://example.com/images/hotel/7b4ffd86-3253-4c1b-b669-b3812d036dad.jpg",
+      "https://example.com/images/hotel/54552ca5-b308-4526-931a-0a7f6ea2485d.jpg",
+      "https://example.com/images/hotel/871c7fee-7285-4d73-bc37-968449a5055b.jpg"
+    ],
+    "rooms": [
+      "f9561644-c7c1-431f-8a12-71e45bbafcc2"
+    ],
+    "title": "HA NOI Royal Palace 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "a1d4d6c7-55a4-4f0c-b38f-0c4c0cb9ccd8"
+    },
+    "address": "City Center, 727 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 207,
+    "city": "Ha Noi",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "2",
+    "featured": true,
+    "name": "HA NOI Sunrise Hotel 3",
+    "photos": [
+      "https://example.com/images/hotel/69e54ecb-23cd-4e44-8f3b-cd583a2b3bc9.jpg",
+      "https://example.com/images/hotel/d2610cfe-2209-4dca-90fb-a82c6b06e1ee.jpg",
+      "https://example.com/images/hotel/390446b7-639b-40cd-a7d3-847779f0364c.jpg",
+      "https://example.com/images/hotel/10eb4f24-7d4a-47ec-b029-24703da2bd62.jpg"
+    ],
+    "rooms": [
+      "b682aa3a-4d85-446d-9263-5fcae47140cf"
+    ],
+    "title": "HA NOI Sunrise Hotel 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "2460b976-d83c-488a-93a9-d7653cd1562d"
+    },
+    "address": "Old Quarter, 232 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 240,
+    "city": "Nha Trang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "5",
+    "featured": true,
+    "name": "NHA TRANG Golden Star 2",
+    "photos": [
+      "https://example.com/images/hotel/a1ab437b-0c4e-4404-9c20-ecb5696c1f39.jpg",
+      "https://example.com/images/hotel/9963b147-0bea-46ad-be65-2603abfae315.jpg",
+      "https://example.com/images/hotel/5228e6d8-8670-4826-ad63-47c1b765adb0.jpg",
+      "https://example.com/images/hotel/772c01ca-d882-46a5-8064-a7cf90b11724.jpg"
+    ],
+    "rooms": [
+      "ee71d66b-0f98-43b6-af73-ea960e0e2b07"
+    ],
+    "title": "NHA TRANG Golden Star 2",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "46637831-1da3-427e-b462-0a1274239c07"
+    },
+    "address": "District 1, 557 Nguyen Trai, Da Nang, Vietnam",
+    "cheapestPrice": 61,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "16",
+    "featured": true,
+    "name": "DA NANG Royal Palace 2",
+    "photos": [
+      "https://example.com/images/hotel/98ca916e-7d69-4f71-8dfa-3eee020893b6.jpg",
+      "https://example.com/images/hotel/d856f8c5-e300-41b9-b50c-95ef4d8ce7b1.jpg",
+      "https://example.com/images/hotel/08abbe40-cd1d-436d-93f4-1fafbfcbbcbb.jpg",
+      "https://example.com/images/hotel/f030a3b1-5d72-489d-8034-4e724a2750b8.jpg"
+    ],
+    "rooms": [
+      "49f2f8a3-f6a4-41bf-ae52-c99989cf250e"
+    ],
+    "title": "DA NANG Royal Palace 2",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "53e71f24-bf33-4c1f-a092-efe4bc95cbb9"
+    },
+    "address": "Old Quarter, 690 Hang Bong, Hue, Vietnam",
+    "cheapestPrice": 231,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "3",
+    "featured": true,
+    "name": "HUE Royal Palace 3",
+    "photos": [
+      "https://example.com/images/hotel/cef05906-2d31-4d46-bf46-2a8c360effec.jpg",
+      "https://example.com/images/hotel/fedb2072-5f06-409b-9f68-59af2facd818.jpg",
+      "https://example.com/images/hotel/ca170943-8141-4b05-aa4f-d56fce89ce29.jpg",
+      "https://example.com/images/hotel/c467c983-b3ea-459e-b6e0-feffede74a06.jpg"
+    ],
+    "rooms": [
+      "338c44e2-a21e-4ef1-a533-21f9f461afb5"
+    ],
+    "title": "HUE Royal Palace 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "778f6667-e236-422c-9d02-f3c70b806d4c"
+    },
+    "address": "Old Quarter, 397 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 189,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "6",
+    "featured": true,
+    "name": "HA NOI Golden Star 5",
+    "photos": [
+      "https://example.com/images/hotel/35203854-070c-4cf4-8e5e-6e34761fae52.jpg",
+      "https://example.com/images/hotel/6c1140b9-a8f1-48d0-b293-9997ccd1c133.jpg",
+      "https://example.com/images/hotel/38a0054f-b047-47d4-be3d-e37832d4099e.jpg",
+      "https://example.com/images/hotel/480609bf-5219-4e80-8324-b2d488bc833a.jpg"
+    ],
+    "rooms": [
+      "de12a1c3-bfdc-471f-9082-3b6b979267fa"
+    ],
+    "title": "HA NOI Golden Star 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "9a4f649c-b5e6-4974-b369-6a1152797c8f"
+    },
+    "address": "City Center, 234 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 265,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "13",
+    "featured": false,
+    "name": "HO CHI MINH CITY Royal Palace 4",
+    "photos": [
+      "https://example.com/images/hotel/4d9059ef-51e6-4340-ba9f-ed2719a3e415.jpg",
+      "https://example.com/images/hotel/c51f75b0-f3c9-46b0-9f0a-ab3e8cbf3b24.jpg",
+      "https://example.com/images/hotel/476a79de-044e-40cd-a890-1c3bfcd4010e.jpg",
+      "https://example.com/images/hotel/9f2949c9-24ce-4e7c-b1f7-89d514548f11.jpg"
+    ],
+    "rooms": [
+      "23e5a7c2-f2c9-4908-9126-eaad1055914f"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "cef4a42f-0e07-4295-b9d5-61149d6babaf"
+    },
+    "address": "City Center, 475 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 87,
+    "city": "Ha Noi",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "13",
+    "featured": false,
+    "name": "HA NOI Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/093e0635-7254-4ef6-85a9-e77882179afd.jpg",
+      "https://example.com/images/hotel/858f62d5-ca2a-4f83-9231-5916ea835a53.jpg",
+      "https://example.com/images/hotel/bb71a961-02a9-45d9-9b32-0b9ad352ceba.jpg",
+      "https://example.com/images/hotel/98295c35-ffa6-4ec1-8497-63ca3e2bbb91.jpg"
+    ],
+    "rooms": [
+      "ef12d208-be43-41a2-9c24-b51312380596"
+    ],
+    "title": "HA NOI Urban Retreat 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "1d84764c-08b5-4a56-8832-ff3bb26aa765"
+    },
+    "address": "District 1, 951 Pham Ngu Lao, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 115,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "2",
+    "featured": true,
+    "name": "HO CHI MINH CITY Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/bdd7d3f3-bc63-476c-a23f-3de0ede283d6.jpg",
+      "https://example.com/images/hotel/d75fa887-4f1d-41ee-8336-39e1b189b361.jpg",
+      "https://example.com/images/hotel/70024ae7-845d-4969-af89-0dc7ffc2b407.jpg",
+      "https://example.com/images/hotel/d461d2d6-daaf-4463-8f26-4b39638e7a02.jpg"
+    ],
+    "rooms": [
+      "acff12b1-27fb-4192-8591-9b43888a46b9"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "ec58249b-98da-4c12-a7fc-0dc44293ec85"
+    },
+    "address": "District 1, 858 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 174,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "12",
+    "featured": true,
+    "name": "DA NANG Luxury Stay 3",
+    "photos": [
+      "https://example.com/images/hotel/ffdf37a3-a44a-48c1-bb76-d57c24b38665.jpg",
+      "https://example.com/images/hotel/9a4abe54-53dd-4d47-8455-b8dcbee544a4.jpg",
+      "https://example.com/images/hotel/f48d9382-0225-4cfb-b549-7440ffb46c21.jpg",
+      "https://example.com/images/hotel/35ab59ea-3a78-4a2f-85f8-abd7b4819d2f.jpg"
+    ],
+    "rooms": [
+      "a93939b8-3f88-4059-a1bb-f60f0d470514"
+    ],
+    "title": "DA NANG Luxury Stay 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "97bfe999-9632-4302-ae80-e6674bc4955f"
+    },
+    "address": "District 1, 405 Tran Phu, Hue, Vietnam",
+    "cheapestPrice": 65,
+    "city": "Hue",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "2",
+    "featured": true,
+    "name": "HUE Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/cc6dccf7-bce2-49a7-87de-2623680899a0.jpg",
+      "https://example.com/images/hotel/576a4104-4b11-43e2-8da4-f4b326a3bec9.jpg",
+      "https://example.com/images/hotel/b3d15490-f798-497a-897c-a7b3f33ab9a0.jpg",
+      "https://example.com/images/hotel/1f98483d-9568-4f3b-b7ba-ea6cd77b4ca6.jpg"
+    ],
+    "rooms": [
+      "858420c6-0074-43d3-ab27-6820a6f8111a"
+    ],
+    "title": "HUE Luxury Stay 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "6aa654bb-4c75-4be4-8d6a-e25c154b61bd"
+    },
+    "address": "Old Quarter, 904 Pham Ngu Lao, Da Nang, Vietnam",
+    "cheapestPrice": 177,
+    "city": "Da Nang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "13",
+    "featured": false,
+    "name": "DA NANG Sunrise Hotel 1",
+    "photos": [
+      "https://example.com/images/hotel/cc4519f1-a34f-4620-850d-559dcb5c49c0.jpg",
+      "https://example.com/images/hotel/a3d7318c-59c8-46aa-8c33-de79e51fb9de.jpg",
+      "https://example.com/images/hotel/e4fad5e6-00c7-4f2b-bf5c-891954a2830a.jpg",
+      "https://example.com/images/hotel/de703fe9-ff7f-4e97-bae5-cd3b3514f876.jpg"
+    ],
+    "rooms": [
+      "326b1adc-3817-4255-b838-d8e2115038b7"
+    ],
+    "title": "DA NANG Sunrise Hotel 1",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "5ed53f9f-0752-4adb-917d-82d118dc32fa"
+    },
+    "address": "Beachfront, 426 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 72,
+    "city": "Da Nang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "3",
+    "featured": false,
+    "name": "DA NANG Sunrise Hotel 4",
+    "photos": [
+      "https://example.com/images/hotel/25618ede-5459-443a-8607-35aff07f634a.jpg",
+      "https://example.com/images/hotel/2847502a-683a-4aac-a663-9cf896040255.jpg",
+      "https://example.com/images/hotel/b111245d-c0e0-432e-bede-867997159cd5.jpg",
+      "https://example.com/images/hotel/933cc19b-19a4-4a7c-9b09-a5c18dda1ed5.jpg"
+    ],
+    "rooms": [
+      "a7d1e8d6-0896-4af7-aa53-5fcc18207dc2"
+    ],
+    "title": "DA NANG Sunrise Hotel 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "1bb01b0c-14c3-4deb-9424-47106045412a"
+    },
+    "address": "Beachfront, 519 Pham Ngu Lao, Ha Noi, Vietnam",
+    "cheapestPrice": 184,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "18",
+    "featured": true,
+    "name": "HA NOI Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/6e79a193-32d3-490e-b771-11351f65c796.jpg",
+      "https://example.com/images/hotel/5caaac85-bb22-4ccc-894f-6cfedfdd8b0b.jpg",
+      "https://example.com/images/hotel/f1eef771-c8a0-4127-a87f-d4be84685ed9.jpg",
+      "https://example.com/images/hotel/893b81d4-b519-4055-8a72-3855c59185d4.jpg"
+    ],
+    "rooms": [
+      "a3a9a0fc-fe06-49a1-b0b5-1cc6c9f37cfa"
+    ],
+    "title": "HA NOI Luxury Stay 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "d3b1604a-541f-4c05-9d1e-bcd8536d25e8"
+    },
+    "address": "Ancient Town, 255 Pham Ngu Lao, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 165,
+    "city": "Ho Chi Minh City",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "18",
+    "featured": false,
+    "name": "HO CHI MINH CITY Sunrise Hotel 3",
+    "photos": [
+      "https://example.com/images/hotel/aa54d853-a9b0-42ae-b72c-517d70e2abb7.jpg",
+      "https://example.com/images/hotel/6336f297-ece5-4983-9d03-6e29338daf21.jpg",
+      "https://example.com/images/hotel/4b4c34d6-30b3-45ba-9692-3f63db1ae298.jpg",
+      "https://example.com/images/hotel/dfc962e5-ecd8-49f2-9b72-c392263be467.jpg"
+    ],
+    "rooms": [
+      "df7bd0ff-a056-454c-a73f-da8aa14b3d71"
+    ],
+    "title": "HO CHI MINH CITY Sunrise Hotel 3",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "84b04786-3484-46dc-a49f-6d291d3095a0"
+    },
+    "address": "City Center, 63 Hang Bong, Da Nang, Vietnam",
+    "cheapestPrice": 59,
+    "city": "Da Nang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "9",
+    "featured": true,
+    "name": "DA NANG Sunrise Hotel 3",
+    "photos": [
+      "https://example.com/images/hotel/be4b026f-42cc-4e2d-b49d-eca43ca9a7d7.jpg",
+      "https://example.com/images/hotel/d96d76db-c0b8-4d11-8faf-31aa442d351d.jpg",
+      "https://example.com/images/hotel/83284822-3592-4a71-8bcd-93fed77e02f6.jpg",
+      "https://example.com/images/hotel/8b735b58-c98f-49a4-aa82-8239631973b8.jpg"
+    ],
+    "rooms": [
+      "bc2781f8-6713-4cc1-9d29-e8fecb0184f1"
+    ],
+    "title": "DA NANG Sunrise Hotel 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "371762ed-8bc9-415b-aecc-9968c5d029c3"
+    },
+    "address": "Old Quarter, 897 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 156,
+    "city": "Hue",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "18",
+    "featured": false,
+    "name": "HUE Royal Palace 2",
+    "photos": [
+      "https://example.com/images/hotel/53ef4209-309d-4529-aa60-8e716b67b555.jpg",
+      "https://example.com/images/hotel/d7d2d86d-79fe-41c0-afcf-26c53c6e7edb.jpg",
+      "https://example.com/images/hotel/3ae510fd-367b-4b6e-8c35-694bb1d7f144.jpg",
+      "https://example.com/images/hotel/9ef9f573-0757-4388-9a2d-4c5e5a2feda6.jpg"
+    ],
+    "rooms": [
+      "e979c905-0a4f-4b3b-8f0d-8a2be47c4be2"
+    ],
+    "title": "HUE Royal Palace 2",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "d6f5aada-8ace-4b21-a3e3-bd70e86ce8bd"
+    },
+    "address": "Old Quarter, 637 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 239,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "7",
+    "featured": true,
+    "name": "HO CHI MINH CITY Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/c2f5be0e-ed60-45eb-840f-8b81d355dd1e.jpg",
+      "https://example.com/images/hotel/009494f6-16dd-433b-ba3d-965a64ea0838.jpg",
+      "https://example.com/images/hotel/4c0b2946-7348-49e5-8dda-1a9bb7452e22.jpg",
+      "https://example.com/images/hotel/02ec01cb-7884-4cef-8814-6bfb324bd51e.jpg"
+    ],
+    "rooms": [
+      "ecb135e9-8717-4fb2-8360-c8e85df199ff"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "8615ceb3-ba48-4ea6-9bbf-f3b1e154cbd2"
+    },
+    "address": "Beachfront, 824 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 271,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "20",
+    "featured": false,
+    "name": "HO CHI MINH CITY Urban Retreat 2",
+    "photos": [
+      "https://example.com/images/hotel/0ab76d0e-0259-41fc-9017-e4f418bac275.jpg",
+      "https://example.com/images/hotel/b05aae62-e9f4-4b9f-a7d9-9ce2e8e7fd63.jpg",
+      "https://example.com/images/hotel/ec85e66a-9ee3-4c21-b51c-2b95a18e9f0c.jpg",
+      "https://example.com/images/hotel/639064e3-ceb8-4ead-9c18-01f0e74b725a.jpg"
+    ],
+    "rooms": [
+      "5ce22bbf-da42-485e-880c-d2298f08bc37"
+    ],
+    "title": "HO CHI MINH CITY Urban Retreat 2",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "1b6311a4-b51d-46d5-ab4a-6f40bccbb21c"
+    },
+    "address": "Ancient Town, 627 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 229,
+    "city": "Nha Trang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "9",
+    "featured": true,
+    "name": "NHA TRANG Sunrise Hotel 3",
+    "photos": [
+      "https://example.com/images/hotel/6b9b0509-235c-4cb9-854c-0ade6fafa8fd.jpg",
+      "https://example.com/images/hotel/e437016e-abff-46d3-8fc0-8a8001299761.jpg",
+      "https://example.com/images/hotel/6c945aa7-7f6e-4584-a687-380ac17d060a.jpg",
+      "https://example.com/images/hotel/efaf0dc0-5d36-4d83-aeb0-fb98d53d3f37.jpg"
+    ],
+    "rooms": [
+      "780e7324-fb1b-4db8-8aea-4c1ad19211d5"
+    ],
+    "title": "NHA TRANG Sunrise Hotel 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "6c70cda2-4bbd-48dc-882c-3b9288380270"
+    },
+    "address": "City Center, 694 Nguyen Trai, Hue, Vietnam",
+    "cheapestPrice": 88,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "11",
+    "featured": false,
+    "name": "HUE Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/44ba021c-73d3-453d-a85a-e97f71af990a.jpg",
+      "https://example.com/images/hotel/bdb4d209-b185-4d56-8e5a-76fa54503d14.jpg",
+      "https://example.com/images/hotel/451c9e71-e94a-47c7-bc64-1bb8ab1e82ca.jpg",
+      "https://example.com/images/hotel/2b0ad12b-078b-4256-8149-670bdb3336f5.jpg"
+    ],
+    "rooms": [
+      "5b293ca7-ac2d-4d4e-8feb-1c14f050b31d"
+    ],
+    "title": "HUE Royal Palace 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "5452bf5a-1807-4a77-9533-4850d2e3e5d7"
+    },
+    "address": "District 1, 104 Pham Ngu Lao, Hue, Vietnam",
+    "cheapestPrice": 240,
+    "city": "Hue",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "11",
+    "featured": false,
+    "name": "HUE Luxury Stay 1",
+    "photos": [
+      "https://example.com/images/hotel/d77d6729-7c6c-46b7-b293-d5b83477caa9.jpg",
+      "https://example.com/images/hotel/4310da22-5b4f-43c6-97b9-9bdd7b84bfe9.jpg",
+      "https://example.com/images/hotel/5870125b-aaf5-4b42-9eef-444a40dd92bd.jpg",
+      "https://example.com/images/hotel/c181bfe4-205c-4145-8c38-7396c889692e.jpg"
+    ],
+    "rooms": [
+      "8c5db102-148e-4e47-85d9-9d7d3248a6f4"
+    ],
+    "title": "HUE Luxury Stay 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "ec4f0715-35f9-4df2-9dd5-362254190b13"
+    },
+    "address": "Old Quarter, 338 Pham Ngu Lao, Ha Noi, Vietnam",
+    "cheapestPrice": 86,
+    "city": "Ha Noi",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "7",
+    "featured": false,
+    "name": "HA NOI Luxury Stay 3",
+    "photos": [
+      "https://example.com/images/hotel/de3cd5c2-3281-42ea-92d7-c136c5a10c03.jpg",
+      "https://example.com/images/hotel/3acd959c-e125-4300-aac9-e7ad131334c3.jpg",
+      "https://example.com/images/hotel/2e94aaf1-64a0-4ec9-a77b-731c74782ab2.jpg",
+      "https://example.com/images/hotel/d990d495-07ae-41e6-88d2-839512efa1af.jpg"
+    ],
+    "rooms": [
+      "6f812f36-330f-4bb9-ba38-6783be3ac385"
+    ],
+    "title": "HA NOI Luxury Stay 3",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "b532073d-43dd-4360-a2ee-7c7640af2bad"
+    },
+    "address": "Ancient Town, 283 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 139,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "15",
+    "featured": true,
+    "name": "HA NOI Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/98a17a27-bc68-414f-a0b0-dc6baf1cc1c0.jpg",
+      "https://example.com/images/hotel/5b8bbfef-f3a3-4e8b-b493-208e3ad47dd9.jpg",
+      "https://example.com/images/hotel/592d8bb3-07f9-41f5-b2d9-90ce8c7f153e.jpg",
+      "https://example.com/images/hotel/b6078ecf-1586-4a28-ae93-c83c56581f32.jpg"
+    ],
+    "rooms": [
+      "12fbd662-d09f-4fb5-85ee-6b92a8f3c082"
+    ],
+    "title": "HA NOI Royal Palace 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "3785523c-2a3c-418b-80b0-b9ded861c956"
+    },
+    "address": "Old Quarter, 227 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 217,
+    "city": "Ho Chi Minh City",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "9",
+    "featured": true,
+    "name": "HO CHI MINH CITY Golden Star 1",
+    "photos": [
+      "https://example.com/images/hotel/9d67fe89-b305-4a0c-a305-f295cbc48d27.jpg",
+      "https://example.com/images/hotel/8f7ae95a-19c8-4cfc-a382-f251c3557baa.jpg",
+      "https://example.com/images/hotel/476fe3a1-a12f-4e73-811c-410d87e832d1.jpg",
+      "https://example.com/images/hotel/ced6c236-3d3a-4df8-9241-67a73cede858.jpg"
+    ],
+    "rooms": [
+      "df741f0b-2ac0-4d12-9291-52467d856250"
+    ],
+    "title": "HO CHI MINH CITY Golden Star 1",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "83f6ebb6-19cf-4709-a9fc-92409ae68d0a"
+    },
+    "address": "Beachfront, 167 Tran Phu, Nha Trang, Vietnam",
+    "cheapestPrice": 190,
+    "city": "Nha Trang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "10",
+    "featured": false,
+    "name": "NHA TRANG Sunrise Hotel 1",
+    "photos": [
+      "https://example.com/images/hotel/27e3cc0b-2281-41f8-a019-4aa5f32d9a18.jpg",
+      "https://example.com/images/hotel/16eab028-6c39-436a-9aa0-a036f837bdef.jpg",
+      "https://example.com/images/hotel/400358f8-a508-4b86-a672-87411625bc93.jpg",
+      "https://example.com/images/hotel/60f8520b-b778-4c99-abf8-2255edd074f5.jpg"
+    ],
+    "rooms": [
+      "3f03a309-2ef4-45b7-bb54-5340b1e2e68f"
+    ],
+    "title": "NHA TRANG Sunrise Hotel 1",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "af97f019-485d-4ba9-ad09-1da2dd89894a"
+    },
+    "address": "District 1, 75 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 96,
+    "city": "Nha Trang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "5",
+    "featured": true,
+    "name": "NHA TRANG Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/45bb441b-5bce-4cf0-8038-9ab8127e4e15.jpg",
+      "https://example.com/images/hotel/e0efab8f-d019-4ba5-adda-392671cf7da6.jpg",
+      "https://example.com/images/hotel/6669a462-c87c-4b50-9c09-4891bd700c6f.jpg",
+      "https://example.com/images/hotel/11569978-205e-4fb6-b406-16dab4657b4c.jpg"
+    ],
+    "rooms": [
+      "9f672d6a-f7f4-42f3-9436-901ceeec39f4"
+    ],
+    "title": "NHA TRANG Urban Retreat 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "1a6fc16a-f7da-42f3-8bf7-7227d210251d"
+    },
+    "address": "Ancient Town, 259 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 53,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "18",
+    "featured": false,
+    "name": "HUE Urban Retreat 4",
+    "photos": [
+      "https://example.com/images/hotel/b3d08ffb-e6de-4895-ac47-f466a3d80f61.jpg",
+      "https://example.com/images/hotel/2e7877ac-b753-4462-a0b2-2b6f6d028458.jpg",
+      "https://example.com/images/hotel/7f5627dc-44c1-4731-ad8d-6d1dd410ec1b.jpg",
+      "https://example.com/images/hotel/53f30b90-04a2-4308-8c7c-317ccd758a6a.jpg"
+    ],
+    "rooms": [
+      "5a6c724c-d36d-407d-98df-58daa937ddf2"
+    ],
+    "title": "HUE Urban Retreat 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "d3535428-328f-4e2d-8c72-c131f7b56d3c"
+    },
+    "address": "City Center, 567 Pham Ngu Lao, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 138,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "10",
+    "featured": true,
+    "name": "HO CHI MINH CITY Sunrise Hotel 5",
+    "photos": [
+      "https://example.com/images/hotel/c904b4eb-a63a-40d7-96a9-bad36469f27e.jpg",
+      "https://example.com/images/hotel/d5b9554a-bdc9-44fa-b1c0-c7e0de311edd.jpg",
+      "https://example.com/images/hotel/89831d91-f7ae-4a6e-a021-87e7bc874ee3.jpg",
+      "https://example.com/images/hotel/a6bd87b0-5a10-47fa-aeee-b90f754af4b1.jpg"
+    ],
+    "rooms": [
+      "a3be0fb1-7d0f-4421-977b-8519de3c38bf"
+    ],
+    "title": "HO CHI MINH CITY Sunrise Hotel 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "c1a9ba02-d206-4163-8743-bc102f1f6f1a"
+    },
+    "address": "Beachfront, 211 Hang Bong, Da Nang, Vietnam",
+    "cheapestPrice": 204,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "5",
+    "featured": false,
+    "name": "DA NANG Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/c0a0010d-ad09-472a-bd94-0fa7955b1be1.jpg",
+      "https://example.com/images/hotel/90cbf626-4dac-4e79-afce-fcc9c6eb105d.jpg",
+      "https://example.com/images/hotel/165e27ae-adc9-4e41-acde-4387755b801b.jpg",
+      "https://example.com/images/hotel/1ba6a854-b164-4446-a05d-940093951a15.jpg"
+    ],
+    "rooms": [
+      "812fc19b-e111-44e7-b4e9-49578b5378e7"
+    ],
+    "title": "DA NANG Royal Palace 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "60cfc457-7fb9-4f6b-af74-de9893a2406e"
+    },
+    "address": "Old Quarter, 808 Tran Phu, Da Nang, Vietnam",
+    "cheapestPrice": 162,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "4",
+    "featured": true,
+    "name": "DA NANG Urban Retreat 1",
+    "photos": [
+      "https://example.com/images/hotel/a36ba572-32bd-4bfc-9b39-644b73704db4.jpg",
+      "https://example.com/images/hotel/0a13a1cf-3686-4798-87aa-b22137cf99aa.jpg",
+      "https://example.com/images/hotel/b41b057f-d635-421c-8edf-8d9efb8fae33.jpg",
+      "https://example.com/images/hotel/0fbb46e2-2954-43a8-88b8-7b490013952c.jpg"
+    ],
+    "rooms": [
+      "3353273c-d292-4613-9283-913f05b3ca9e"
+    ],
+    "title": "DA NANG Urban Retreat 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "c5dae17e-36f9-44b9-95f8-1c149be9716a"
+    },
+    "address": "Ancient Town, 370 Pham Ngu Lao, Da Nang, Vietnam",
+    "cheapestPrice": 160,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "11",
+    "featured": false,
+    "name": "DA NANG Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/556eacd5-9e35-4fe2-abf8-4f9ec9b7e755.jpg",
+      "https://example.com/images/hotel/d7a6dedc-f708-4f01-b4b8-2a86f7ce5c89.jpg",
+      "https://example.com/images/hotel/ab9e2732-b09c-4f01-aef2-0d83a0b8fb24.jpg",
+      "https://example.com/images/hotel/18cf2cd5-0b5d-43b1-bf1d-aba85b09f1da.jpg"
+    ],
+    "rooms": [
+      "f1eb773b-0583-487a-9cac-f61f60c07280"
+    ],
+    "title": "DA NANG Royal Palace 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "b893119f-3c54-41c2-8c17-5b1a6acec401"
+    },
+    "address": "City Center, 566 Pham Ngu Lao, Ha Noi, Vietnam",
+    "cheapestPrice": 139,
+    "city": "Ha Noi",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "4",
+    "featured": false,
+    "name": "HA NOI Luxury Stay 1",
+    "photos": [
+      "https://example.com/images/hotel/c9188d5b-123a-4b15-966e-6450997ee3ca.jpg",
+      "https://example.com/images/hotel/42bad8ec-2db8-4d9c-91a6-d716d96ec3ac.jpg",
+      "https://example.com/images/hotel/2cdeff1d-b93a-44b8-9e07-b6e56d7e6a3a.jpg",
+      "https://example.com/images/hotel/980c79ce-b71b-4c19-b743-b684cd7e6535.jpg"
+    ],
+    "rooms": [
+      "511176a0-1ee7-453b-82aa-089849965636"
+    ],
+    "title": "HA NOI Luxury Stay 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "06887aef-ccb7-4223-a745-228b40194821"
+    },
+    "address": "Beachfront, 384 Tran Phu, Da Nang, Vietnam",
+    "cheapestPrice": 298,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "14",
+    "featured": false,
+    "name": "DA NANG Sunrise Hotel 5",
+    "photos": [
+      "https://example.com/images/hotel/72e6d65a-46ea-4e56-afb1-597ba395d055.jpg",
+      "https://example.com/images/hotel/378c014a-07ba-4fe8-9af9-aa487a7bf5f7.jpg",
+      "https://example.com/images/hotel/fa5445cd-c06e-483c-aeda-63460a760c1d.jpg",
+      "https://example.com/images/hotel/c2b29e8d-4947-45b6-8b63-4ae0f8920318.jpg"
+    ],
+    "rooms": [
+      "51e2893f-9b31-43dd-b861-dcd8a30576dc"
+    ],
+    "title": "DA NANG Sunrise Hotel 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "77e1d43d-60c0-4357-b9af-90c395cd94e3"
+    },
+    "address": "City Center, 393 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 50,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "8",
+    "featured": false,
+    "name": "HA NOI Urban Retreat 2",
+    "photos": [
+      "https://example.com/images/hotel/7cfdf31d-3e46-400c-82d4-385a323a26b9.jpg",
+      "https://example.com/images/hotel/8fdfd856-cb79-4d8d-9b75-0203771de9b2.jpg",
+      "https://example.com/images/hotel/97e8a268-55ba-411f-a800-ab8d644ba33f.jpg",
+      "https://example.com/images/hotel/f59a5776-ee1c-4b6a-9396-d8ad61a51d2b.jpg"
+    ],
+    "rooms": [
+      "c35f6ffc-e854-4973-b7f7-18d993e36de9"
+    ],
+    "title": "HA NOI Urban Retreat 2",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "3d974f87-6277-440c-9b3f-e02ff31fb088"
+    },
+    "address": "District 1, 766 Pham Ngu Lao, Da Nang, Vietnam",
+    "cheapestPrice": 291,
+    "city": "Da Nang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "6",
+    "featured": true,
+    "name": "DA NANG Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/1807fd9f-5a4d-4a61-bbab-95d3e18d4625.jpg",
+      "https://example.com/images/hotel/a91ef1b2-eda7-4a75-8e0f-ff2a8928b570.jpg",
+      "https://example.com/images/hotel/cfcb3bca-d678-4bdc-9dc6-13042463524f.jpg",
+      "https://example.com/images/hotel/74741320-b99a-413c-be76-a4f1a59262a5.jpg"
+    ],
+    "rooms": [
+      "68a789e3-c674-4c62-b2f4-97a85e6574d5"
+    ],
+    "title": "DA NANG Golden Star 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "fc4f6822-a045-4943-9d98-63a147ab38bb"
+    },
+    "address": "Beachfront, 845 Pham Ngu Lao, Da Nang, Vietnam",
+    "cheapestPrice": 197,
+    "city": "Da Nang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "5",
+    "featured": false,
+    "name": "DA NANG Golden Star 2",
+    "photos": [
+      "https://example.com/images/hotel/250b48cb-0151-4d22-af1e-b8961188bd9c.jpg",
+      "https://example.com/images/hotel/15737483-727e-47eb-a589-e9002bb144d5.jpg",
+      "https://example.com/images/hotel/ce682ad2-8934-48ba-aaca-dea081bc0815.jpg",
+      "https://example.com/images/hotel/94e5ba86-f8dc-413e-87bc-b892858676a7.jpg"
+    ],
+    "rooms": [
+      "e39402f6-64ed-4414-ac0c-e45544fc68db"
+    ],
+    "title": "DA NANG Golden Star 2",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "7cb55939-fd58-403a-b806-1ccb1344425a"
+    },
+    "address": "Beachfront, 79 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 176,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "4",
+    "featured": true,
+    "name": "HUE Royal Palace 2",
+    "photos": [
+      "https://example.com/images/hotel/5a0205d3-b0ef-4369-a851-8a473d0d17a2.jpg",
+      "https://example.com/images/hotel/494f0f6e-6bf3-4255-8098-eb249057f0c3.jpg",
+      "https://example.com/images/hotel/106bae91-f360-4e49-8d52-1bed6dfc1fa3.jpg",
+      "https://example.com/images/hotel/ee233bec-4200-4fde-82d5-cb6034bed77e.jpg"
+    ],
+    "rooms": [
+      "0e6874b2-0c2d-4e2b-879b-56de0d442dd0"
+    ],
+    "title": "HUE Royal Palace 2",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "95a2252c-09a0-46fd-b2a8-4a0a6981fa0a"
+    },
+    "address": "Beachfront, 600 Hang Bong, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 65,
+    "city": "Ho Chi Minh City",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "6",
+    "featured": true,
+    "name": "HO CHI MINH CITY Luxury Stay 4",
+    "photos": [
+      "https://example.com/images/hotel/f8754183-1acb-4b74-af68-2df80161f42a.jpg",
+      "https://example.com/images/hotel/e5ddff34-e77d-4a9a-9a38-436ce9d06bef.jpg",
+      "https://example.com/images/hotel/4af4bfb5-a627-4721-94bb-1d99955543f4.jpg",
+      "https://example.com/images/hotel/dc4e9548-b8a1-4f05-b48a-b0f7bbf97869.jpg"
+    ],
+    "rooms": [
+      "93f6cf43-f540-4bff-ad3f-655e049b81d3"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "25659177-267a-45a9-85eb-44411d709dc4"
+    },
+    "address": "Old Quarter, 758 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 128,
+    "city": "Da Nang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "16",
+    "featured": true,
+    "name": "DA NANG Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/4cf9512d-5c3a-487a-902c-06cf0aeffedd.jpg",
+      "https://example.com/images/hotel/08258d11-4928-4ee5-ab1b-5993730e34b0.jpg",
+      "https://example.com/images/hotel/6b2acd0b-4817-42b7-8743-3bc478c08496.jpg",
+      "https://example.com/images/hotel/251e30ac-f59a-4543-ba8c-5b3f241d6f3f.jpg"
+    ],
+    "rooms": [
+      "5f6973b2-95e0-4f4e-bad2-509e76f24164"
+    ],
+    "title": "DA NANG Urban Retreat 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "cfce31b7-a427-4970-afd3-c615ac7d6393"
+    },
+    "address": "Old Quarter, 975 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 57,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "13",
+    "featured": true,
+    "name": "DA NANG Golden Star 1",
+    "photos": [
+      "https://example.com/images/hotel/790bd5ec-7ceb-4eec-b054-fdf8fba3fc06.jpg",
+      "https://example.com/images/hotel/d58c9717-53b4-4b69-8bdc-049609a9def9.jpg",
+      "https://example.com/images/hotel/c43612ac-945e-4144-becc-48f9673f0471.jpg",
+      "https://example.com/images/hotel/5ed9303a-a2b6-45e0-b2a3-67269299ad30.jpg"
+    ],
+    "rooms": [
+      "e7bbbd28-b1af-4a12-b22c-76a5bbe27578"
+    ],
+    "title": "DA NANG Golden Star 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "07539567-1f86-4823-a4d4-15faa529ccf7"
+    },
+    "address": "Ancient Town, 89 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 188,
+    "city": "Nha Trang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "16",
+    "featured": false,
+    "name": "NHA TRANG Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/0d921bbb-131a-42d5-9c80-df00a24c18a1.jpg",
+      "https://example.com/images/hotel/f07a8b90-9288-47cb-83e3-045eb4d1caef.jpg",
+      "https://example.com/images/hotel/de5135e6-38d2-4118-b149-0c35945a34eb.jpg",
+      "https://example.com/images/hotel/c592762e-0a91-49a1-a33f-429f6143854b.jpg"
+    ],
+    "rooms": [
+      "23a9e253-11f8-444b-bc7f-e90c0ad4db78"
+    ],
+    "title": "NHA TRANG Urban Retreat 3",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "921b01e0-3604-459d-9de1-fa02388639d5"
+    },
+    "address": "District 1, 432 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 219,
+    "city": "Ho Chi Minh City",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "17",
+    "featured": false,
+    "name": "HO CHI MINH CITY Sunrise Hotel 5",
+    "photos": [
+      "https://example.com/images/hotel/457b0f47-db11-4226-935c-84de9f5fd466.jpg",
+      "https://example.com/images/hotel/a7e56b19-2783-4b6d-a055-97e1866f5cc0.jpg",
+      "https://example.com/images/hotel/e8b7b662-a1c3-4b4f-9ebe-4876fe22e8ba.jpg",
+      "https://example.com/images/hotel/e8dde7da-3e48-4861-87bf-4c6c61cf505a.jpg"
+    ],
+    "rooms": [
+      "239a7bb6-5794-43f4-8fde-3c2dd8b3a8fe"
+    ],
+    "title": "HO CHI MINH CITY Sunrise Hotel 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "3ee177c1-5b39-4eb5-a402-04b9f40a811b"
+    },
+    "address": "Beachfront, 540 Nguyen Trai, Da Nang, Vietnam",
+    "cheapestPrice": 82,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "12",
+    "featured": false,
+    "name": "DA NANG Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/eb430b6b-7a77-42a5-b766-62960d146c5d.jpg",
+      "https://example.com/images/hotel/5fbfeb84-b963-4b92-a7c9-44fb98bd3d35.jpg",
+      "https://example.com/images/hotel/65a9b48c-f6b3-4e19-aef5-6a1047c87f3a.jpg",
+      "https://example.com/images/hotel/3ece76fc-3400-442e-83ef-170428573bfd.jpg"
+    ],
+    "rooms": [
+      "69730eb5-4b71-4d40-923f-4307935da017"
+    ],
+    "title": "DA NANG Royal Palace 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "0d27f268-8a6e-462c-afcd-bcbd1f88dae6"
+    },
+    "address": "Old Quarter, 336 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 129,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "12",
+    "featured": true,
+    "name": "HO CHI MINH CITY Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/99bd5f72-5423-4887-9d73-ea76fdbc94d8.jpg",
+      "https://example.com/images/hotel/41780d40-2d3d-47cf-856f-3f65f88990ab.jpg",
+      "https://example.com/images/hotel/9af4ae43-62b2-4ab9-bc2d-3558068a1a71.jpg",
+      "https://example.com/images/hotel/65781d62-5064-44a8-a971-f7be718cabfc.jpg"
+    ],
+    "rooms": [
+      "ad2dbc12-81fd-4914-86cb-48df35a8f9d3"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "bf5747a9-be1b-4f31-8463-2eedfa9101ec"
+    },
+    "address": "District 1, 741 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 118,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "4",
+    "featured": true,
+    "name": "HO CHI MINH CITY Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/a5605197-efe0-4996-b4de-87a5333e4c7f.jpg",
+      "https://example.com/images/hotel/e5b5c257-6fe0-4415-a541-91efef2bb23f.jpg",
+      "https://example.com/images/hotel/40b33699-a9ff-4c65-a72b-36a92f78ec09.jpg",
+      "https://example.com/images/hotel/68bdf504-8f11-4b8b-a5f6-c4a399e56234.jpg"
+    ],
+    "rooms": [
+      "0fffbdd8-253a-4c4f-9de1-820c32b8aab4"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "4793c96d-8e5b-4701-bdd0-8f419a12cf97"
+    },
+    "address": "District 1, 160 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 290,
+    "city": "Ha Noi",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "6",
+    "featured": false,
+    "name": "HA NOI Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/c34f192f-dad2-4210-8b8c-5e7b58cb2225.jpg",
+      "https://example.com/images/hotel/8dad7ca7-2f08-4a3d-9644-286dc358e059.jpg",
+      "https://example.com/images/hotel/0735a877-41ab-4acf-a6f0-47e6f6311b5d.jpg",
+      "https://example.com/images/hotel/5ef98eee-5cd1-4d72-9c6f-9cb05ecba934.jpg"
+    ],
+    "rooms": [
+      "c69911d0-8fc3-4eb2-b3f6-9e578e1ee41d"
+    ],
+    "title": "HA NOI Luxury Stay 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "ebbe664b-81a7-4325-8ce4-daa6b8a67784"
+    },
+    "address": "Ancient Town, 828 Nguyen Trai, Nha Trang, Vietnam",
+    "cheapestPrice": 190,
+    "city": "Nha Trang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "5",
+    "featured": true,
+    "name": "NHA TRANG Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/ce50cb02-0893-432b-957a-02ba74945203.jpg",
+      "https://example.com/images/hotel/e5c49a4c-25ae-463f-a900-12ca5c8ccce8.jpg",
+      "https://example.com/images/hotel/41144fc5-252b-4818-b82e-3ad94f722f1c.jpg",
+      "https://example.com/images/hotel/f8c03e5e-97f1-47c2-9b30-33d729997641.jpg"
+    ],
+    "rooms": [
+      "156060c2-5371-4675-9a39-109e91d86f10"
+    ],
+    "title": "NHA TRANG Urban Retreat 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "c999691a-17e0-44fb-9ed1-9ecce19da7e3"
+    },
+    "address": "Beachfront, 634 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 126,
+    "city": "Hue",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "17",
+    "featured": true,
+    "name": "HUE Sunrise Hotel 2",
+    "photos": [
+      "https://example.com/images/hotel/a86bc7ef-d6b7-4211-917d-f262648a5422.jpg",
+      "https://example.com/images/hotel/107f30b2-db85-46db-ac46-f104bb7abb64.jpg",
+      "https://example.com/images/hotel/fc2e58af-86ae-46a9-9105-ec6670435487.jpg",
+      "https://example.com/images/hotel/2ec12041-5993-4204-ae0a-1b6e3309d0a2.jpg"
+    ],
+    "rooms": [
+      "cd7a716e-be2a-430c-b444-0f6264e84811"
+    ],
+    "title": "HUE Sunrise Hotel 2",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "1cd05947-0af4-40ef-851f-4608b07d1745"
+    },
+    "address": "Old Quarter, 179 Hang Bong, Ha Noi, Vietnam",
+    "cheapestPrice": 161,
+    "city": "Ha Noi",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "7",
+    "featured": true,
+    "name": "HA NOI Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/a323dfc4-01c9-4ca1-82cb-2b79353b93f9.jpg",
+      "https://example.com/images/hotel/9ff47c01-60e9-462e-b4d6-3c9c2313c971.jpg",
+      "https://example.com/images/hotel/d476c884-9775-43f1-b020-c1767283f971.jpg",
+      "https://example.com/images/hotel/a7b07fbc-71ec-4158-bde1-090ed274d3fa.jpg"
+    ],
+    "rooms": [
+      "16ddb211-2a16-4913-ba51-611497893a33"
+    ],
+    "title": "HA NOI Urban Retreat 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "762dcaa4-85bb-41b2-b8b9-088e96f4ce1e"
+    },
+    "address": "City Center, 616 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 179,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "8",
+    "featured": true,
+    "name": "HUE Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/50734471-a577-44e9-a530-ee6bb3cc172e.jpg",
+      "https://example.com/images/hotel/ddf64f39-7537-48ff-81ac-b50595350ebe.jpg",
+      "https://example.com/images/hotel/9d4af3bd-f981-4a24-b10e-747c87f0688b.jpg",
+      "https://example.com/images/hotel/8087878f-0f01-47c0-8429-03a8e188bf7a.jpg"
+    ],
+    "rooms": [
+      "4cbd57b7-e2bb-40c7-9620-b922a5ec9dbd"
+    ],
+    "title": "HUE Luxury Stay 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "29c83dc3-db0f-45ae-b2d5-ebfc9cb93b33"
+    },
+    "address": "District 1, 208 Pham Ngu Lao, Nha Trang, Vietnam",
+    "cheapestPrice": 270,
+    "city": "Nha Trang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "2",
+    "featured": false,
+    "name": "NHA TRANG Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/6e9eb4f8-45fd-4851-b1da-f115ccc4ce1f.jpg",
+      "https://example.com/images/hotel/f1e73efc-3755-4b7b-8b8c-bbfc8be9973c.jpg",
+      "https://example.com/images/hotel/4c869603-1ec0-455a-8c30-c6f97df70785.jpg",
+      "https://example.com/images/hotel/e21c5a95-e136-48cd-9f2a-1c9a0677bb9c.jpg"
+    ],
+    "rooms": [
+      "14faaee1-8c4f-42af-a500-3b90a0ee6822"
+    ],
+    "title": "NHA TRANG Golden Star 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "0c372d63-ce87-4464-9b7c-03ea04e8ec2d"
+    },
+    "address": "City Center, 496 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 300,
+    "city": "Nha Trang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "12",
+    "featured": true,
+    "name": "NHA TRANG Golden Star 1",
+    "photos": [
+      "https://example.com/images/hotel/0686c3de-e487-4666-af76-8f95853dbdcf.jpg",
+      "https://example.com/images/hotel/7904f646-ce7c-4295-9cfa-3b980b5d61d5.jpg",
+      "https://example.com/images/hotel/2d9a7303-509d-4732-8c97-c17769df0a22.jpg",
+      "https://example.com/images/hotel/898783bb-80af-437e-a932-1b72d4186ab8.jpg"
+    ],
+    "rooms": [
+      "b865c539-705e-4bcc-a694-cee3e6a89e58"
+    ],
+    "title": "NHA TRANG Golden Star 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "b18bba15-cd65-4247-a8f8-177214daada9"
+    },
+    "address": "Ancient Town, 441 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 54,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "5",
+    "featured": false,
+    "name": "HO CHI MINH CITY Royal Palace 4",
+    "photos": [
+      "https://example.com/images/hotel/96f65d06-c0d3-428a-9cad-31607f735e5d.jpg",
+      "https://example.com/images/hotel/4c2dce91-7421-4a16-942f-ed77921fff0f.jpg",
+      "https://example.com/images/hotel/41bad8d8-b09a-46f3-8eed-70d7b4498ad2.jpg",
+      "https://example.com/images/hotel/6ab507ad-b2e2-415d-a385-55701aaa3f9f.jpg"
+    ],
+    "rooms": [
+      "d01fd049-e5bd-4997-841b-f12f3bd6ed00"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "c6921fc9-dcd7-4770-b11d-4673c626478c"
+    },
+    "address": "Old Quarter, 441 Hang Bong, Ha Noi, Vietnam",
+    "cheapestPrice": 199,
+    "city": "Ha Noi",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "11",
+    "featured": true,
+    "name": "HA NOI Royal Palace 4",
+    "photos": [
+      "https://example.com/images/hotel/cf163463-5b2d-40be-83f6-7ba62d8845d9.jpg",
+      "https://example.com/images/hotel/c77cb358-b125-4e9c-8955-2c1117c212c7.jpg",
+      "https://example.com/images/hotel/bbe15e8f-1e3c-4758-a3da-ea4e9ee3a1e8.jpg",
+      "https://example.com/images/hotel/19c6020e-2ee2-418f-80fb-91dc524229ed.jpg"
+    ],
+    "rooms": [
+      "b0a13197-fdfc-4aee-91ee-09ed0c295505"
+    ],
+    "title": "HA NOI Royal Palace 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "a72a2a3e-c801-4610-a2ae-465f77d5d4f1"
+    },
+    "address": "Beachfront, 594 Pham Ngu Lao, Nha Trang, Vietnam",
+    "cheapestPrice": 212,
+    "city": "Nha Trang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "16",
+    "featured": true,
+    "name": "NHA TRANG Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/bbc984cb-64d3-4f72-a6a9-e7d7cbdf9ed2.jpg",
+      "https://example.com/images/hotel/d63ad18f-fe6f-42e4-befd-94b09fc1f6b0.jpg",
+      "https://example.com/images/hotel/b557e71c-eb8c-40a3-a78a-77939741e073.jpg",
+      "https://example.com/images/hotel/2ce4f3bb-12e0-4d3e-acbd-5b3450dbb598.jpg"
+    ],
+    "rooms": [
+      "03f030cf-7665-4905-bacf-c75e742f5a23"
+    ],
+    "title": "NHA TRANG Luxury Stay 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "1f71e9d8-e4af-44eb-82ce-55a8ee3fe70e"
+    },
+    "address": "Ancient Town, 451 Tran Phu, Da Nang, Vietnam",
+    "cheapestPrice": 55,
+    "city": "Da Nang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "4",
+    "featured": false,
+    "name": "DA NANG Golden Star 5",
+    "photos": [
+      "https://example.com/images/hotel/ad30af9e-46b2-4c1b-8b1a-9cf9657dc345.jpg",
+      "https://example.com/images/hotel/2a4669c6-2e0c-4dcd-9062-2a340db2a761.jpg",
+      "https://example.com/images/hotel/1b6bacd3-7585-4d65-a5b9-be591d949f39.jpg",
+      "https://example.com/images/hotel/e4b16719-0f81-4a26-b0a4-6793e19a71f0.jpg"
+    ],
+    "rooms": [
+      "ca4c2c5c-4cf9-4d4f-b1d9-a86417fcbed3"
+    ],
+    "title": "DA NANG Golden Star 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "cce67d7c-18d1-4c05-bf43-e27a771ac873"
+    },
+    "address": "Old Quarter, 151 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 119,
+    "city": "Nha Trang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "17",
+    "featured": true,
+    "name": "NHA TRANG Luxury Stay 4",
+    "photos": [
+      "https://example.com/images/hotel/3d29c334-ca38-457f-bd38-37ed97626127.jpg",
+      "https://example.com/images/hotel/ba7736bd-2845-41df-8cac-e735b5a53041.jpg",
+      "https://example.com/images/hotel/c81b7426-a3fd-43d4-954b-d956ce52d21b.jpg",
+      "https://example.com/images/hotel/016400db-c57c-428b-9236-218560daac11.jpg"
+    ],
+    "rooms": [
+      "74bf9fb4-33a7-4207-a8b9-8838b18d493d"
+    ],
+    "title": "NHA TRANG Luxury Stay 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "eda32f8b-7ca5-4248-9761-5109a5e512b3"
+    },
+    "address": "Beachfront, 555 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 293,
+    "city": "Hue",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "5",
+    "featured": false,
+    "name": "HUE Luxury Stay 3",
+    "photos": [
+      "https://example.com/images/hotel/afd75761-14c9-4e14-af88-b4a64de8e60e.jpg",
+      "https://example.com/images/hotel/ec009047-4e81-4404-ad8f-0bd698b86067.jpg",
+      "https://example.com/images/hotel/8f0f7215-62ea-473f-b789-a2c3cfdd8b0d.jpg",
+      "https://example.com/images/hotel/46f38c44-02e7-485d-b9de-e5019133e952.jpg"
+    ],
+    "rooms": [
+      "28f2c65f-e00a-4e64-9371-603ca4a9fdfc"
+    ],
+    "title": "HUE Luxury Stay 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "c85ab9a8-46db-40a5-985d-12a316f7e4b2"
+    },
+    "address": "Beachfront, 342 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 223,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "7",
+    "featured": false,
+    "name": "HUE Sunrise Hotel 2",
+    "photos": [
+      "https://example.com/images/hotel/dbd7b8d6-e088-4b12-a30c-fe30e76be10a.jpg",
+      "https://example.com/images/hotel/3eb8401f-63b6-4477-841c-0dc06053a76b.jpg",
+      "https://example.com/images/hotel/12fc89ed-6d75-42ea-aed3-c3d69d907532.jpg",
+      "https://example.com/images/hotel/036021a8-b949-471a-99dd-bc7c01450201.jpg"
+    ],
+    "rooms": [
+      "fd5bae90-ba3b-493e-9337-291c916e7c7e"
+    ],
+    "title": "HUE Sunrise Hotel 2",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "85f05f16-44e4-4b84-af8e-d675297e7ccb"
+    },
+    "address": "Ancient Town, 754 Nguyen Trai, Da Nang, Vietnam",
+    "cheapestPrice": 237,
+    "city": "Da Nang",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "10",
+    "featured": false,
+    "name": "DA NANG Luxury Stay 3",
+    "photos": [
+      "https://example.com/images/hotel/00d218a9-5596-4707-aab7-a129b256d66a.jpg",
+      "https://example.com/images/hotel/d8b1b434-8f5f-43ca-ac1c-312295f0cbb8.jpg",
+      "https://example.com/images/hotel/df2d583d-5263-4230-b735-3a25d7de3bf1.jpg",
+      "https://example.com/images/hotel/27e7b8d9-4854-494f-b784-d90dc48e30ff.jpg"
+    ],
+    "rooms": [
+      "572d5b28-9d3d-4950-ae99-a0caa41e9055"
+    ],
+    "title": "DA NANG Luxury Stay 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "423d4df5-4957-42af-b181-a2d64bcb896e"
+    },
+    "address": "City Center, 341 Pham Ngu Lao, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 185,
+    "city": "Ho Chi Minh City",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "2",
+    "featured": true,
+    "name": "HO CHI MINH CITY Luxury Stay 2",
+    "photos": [
+      "https://example.com/images/hotel/249cfc86-adf3-464c-93c3-e45a75b4f568.jpg",
+      "https://example.com/images/hotel/0f15fd19-9496-47b0-8440-f4739101a783.jpg",
+      "https://example.com/images/hotel/02fb440c-fb2a-48eb-ad16-15d3d17f8fbb.jpg",
+      "https://example.com/images/hotel/6f7f8994-56ad-4d38-a7ab-1afe443b89db.jpg"
+    ],
+    "rooms": [
+      "c1cb3c6d-0411-48d8-98bd-0b3eb332c22b"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 2",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "c8e1c150-3f67-467e-8221-2aaa9f3abb24"
+    },
+    "address": "Ancient Town, 143 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 160,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "1",
+    "featured": true,
+    "name": "DA NANG Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/05696fd5-85f3-4b84-9680-ac14fc1a6106.jpg",
+      "https://example.com/images/hotel/ffa685be-8c9a-49bc-b552-683bb902ca86.jpg",
+      "https://example.com/images/hotel/055586e0-e907-4330-8413-454fbcbcc727.jpg",
+      "https://example.com/images/hotel/282eb339-eb96-4645-8859-9c31bfd39844.jpg"
+    ],
+    "rooms": [
+      "93365f44-9306-474e-b7df-90a9dbef2d19"
+    ],
+    "title": "DA NANG Golden Star 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "3982114f-d643-4d9f-9581-db57417de22d"
+    },
+    "address": "Ancient Town, 575 Tran Phu, Hue, Vietnam",
+    "cheapestPrice": 81,
+    "city": "Hue",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "1",
+    "featured": true,
+    "name": "HUE Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/9595ad69-9afe-447a-bfe7-8dcf9ff868d9.jpg",
+      "https://example.com/images/hotel/ff83f690-baa6-468b-b8c0-71de8d2be231.jpg",
+      "https://example.com/images/hotel/9f6b1dd0-b4fb-4f62-aa18-94051dc26c31.jpg",
+      "https://example.com/images/hotel/10cff51c-401f-4b2e-8344-af23b17e97f6.jpg"
+    ],
+    "rooms": [
+      "e5baf7ad-c873-4d1d-ba02-5fffd550108d"
+    ],
+    "title": "HUE Urban Retreat 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "beb80537-5f14-4338-bb5a-84c3cf28d21e"
+    },
+    "address": "District 1, 299 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 292,
+    "city": "Ha Noi",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "2",
+    "featured": true,
+    "name": "HA NOI Golden Star 1",
+    "photos": [
+      "https://example.com/images/hotel/7e12b32a-3e0f-44c5-a6e6-ed0c0d7f4805.jpg",
+      "https://example.com/images/hotel/742cc2fc-024e-4702-b486-f5f997fafb2b.jpg",
+      "https://example.com/images/hotel/71ebee03-17ac-4433-a94c-e47965ca527b.jpg",
+      "https://example.com/images/hotel/ec368ab6-997e-4c11-aad2-da5b81802d49.jpg"
+    ],
+    "rooms": [
+      "ded49fab-14a0-4cc2-a267-42044491622e"
+    ],
+    "title": "HA NOI Golden Star 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "5952d8f4-ead3-4656-8595-e0da32e1aa19"
+    },
+    "address": "Old Quarter, 278 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 124,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "13",
+    "featured": true,
+    "name": "HO CHI MINH CITY Luxury Stay 5",
+    "photos": [
+      "https://example.com/images/hotel/d349aabb-230a-4b5a-a449-c5a1fa1549f5.jpg",
+      "https://example.com/images/hotel/f9ee317f-3ab0-4b31-9c7d-e76dfff6658d.jpg",
+      "https://example.com/images/hotel/f1b1101b-146c-42c0-b311-ac736c63a769.jpg",
+      "https://example.com/images/hotel/66bd9178-c3ab-4f70-a037-6db320aa04c2.jpg"
+    ],
+    "rooms": [
+      "83820ce9-f44f-409c-a4bc-1f2d892579e3"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "e70d7937-3c27-47d7-bc92-6c40e6cacb90"
+    },
+    "address": "Ancient Town, 280 Nguyen Trai, Hue, Vietnam",
+    "cheapestPrice": 158,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "9",
+    "featured": false,
+    "name": "HUE Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/4e0c0621-218f-4a87-b93b-cb3fbfb78262.jpg",
+      "https://example.com/images/hotel/e7def472-2070-464c-9257-21b140e60250.jpg",
+      "https://example.com/images/hotel/1a824115-a2a6-42b6-9db6-39a3577891f2.jpg",
+      "https://example.com/images/hotel/57db1b40-8821-43ec-9948-dc40c0d28a13.jpg"
+    ],
+    "rooms": [
+      "867c4f54-02c2-4573-85f1-34368f6b3bf2"
+    ],
+    "title": "HUE Royal Palace 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "3f4ccb51-80c6-4cda-bb39-df15fdd551e8"
+    },
+    "address": "City Center, 216 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 292,
+    "city": "Ho Chi Minh City",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "8",
+    "featured": false,
+    "name": "HO CHI MINH CITY Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/17f6b8ad-ab5d-4993-b698-8b6139239336.jpg",
+      "https://example.com/images/hotel/36ef8914-2fce-42b4-9577-273d1757bb2a.jpg",
+      "https://example.com/images/hotel/986e5baa-9e0f-480b-9025-7a5a8113de76.jpg",
+      "https://example.com/images/hotel/8ad49de8-8b6b-4cc6-96ce-1a4443f34232.jpg"
+    ],
+    "rooms": [
+      "b09d70b5-2f91-4580-94ae-361ccc783901"
+    ],
+    "title": "HO CHI MINH CITY Urban Retreat 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "bacf7dd9-d6f1-4f6c-9523-f7db4fbf4d19"
+    },
+    "address": "District 1, 323 Nguyen Trai, Da Nang, Vietnam",
+    "cheapestPrice": 116,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "15",
+    "featured": false,
+    "name": "DA NANG Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/5cac9729-dabd-41f6-a7cb-3b1f96280cfc.jpg",
+      "https://example.com/images/hotel/274acb33-0c0d-48ec-a96b-81b0572a52f7.jpg",
+      "https://example.com/images/hotel/f8b92d3b-8fd4-41d5-80fb-dc30402cd73e.jpg",
+      "https://example.com/images/hotel/6188d294-4a26-4379-afd0-4db35e4c09b5.jpg"
+    ],
+    "rooms": [
+      "1abd70a1-e92c-4f77-8e7a-dbd15765a279"
+    ],
+    "title": "DA NANG Urban Retreat 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "4600e79a-e504-4804-ad7c-0e108ea75d5b"
+    },
+    "address": "Old Quarter, 59 Nguyen Trai, Hue, Vietnam",
+    "cheapestPrice": 114,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "20",
+    "featured": true,
+    "name": "HUE Golden Star 4",
+    "photos": [
+      "https://example.com/images/hotel/f21d7bcf-da21-4b62-8eb1-3ee162f36414.jpg",
+      "https://example.com/images/hotel/04f7ca5e-0d1a-4c22-9411-a352c14007d5.jpg",
+      "https://example.com/images/hotel/1f9f6fdf-b03c-4143-8131-2848e2eb375c.jpg",
+      "https://example.com/images/hotel/8187892c-2b50-4b70-844a-16712e84794d.jpg"
+    ],
+    "rooms": [
+      "55d2bf68-c87d-4f22-bb1a-3beb155cb84d"
+    ],
+    "title": "HUE Golden Star 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "e12c6712-197f-4d6d-afba-dee117bb3da6"
+    },
+    "address": "District 1, 209 Pham Ngu Lao, Ha Noi, Vietnam",
+    "cheapestPrice": 145,
+    "city": "Ha Noi",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "5",
+    "featured": true,
+    "name": "HA NOI Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/2d1d7e2b-7ebb-4a66-9a45-b2f62001cd70.jpg",
+      "https://example.com/images/hotel/8923c6b2-8175-4fd0-839a-cec1bf800211.jpg",
+      "https://example.com/images/hotel/f6699b4d-2c2d-4910-bf13-f52a8884ba4c.jpg",
+      "https://example.com/images/hotel/65ad1ca2-df0c-4cc2-a60f-16c19916232b.jpg"
+    ],
+    "rooms": [
+      "f8e62bfd-9845-460c-bc8e-b06eb080c7af"
+    ],
+    "title": "HA NOI Urban Retreat 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "8e1e8ffc-1e1c-43b2-a866-09d494bbe122"
+    },
+    "address": "District 1, 58 Hang Bong, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 204,
+    "city": "Ho Chi Minh City",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "19",
+    "featured": false,
+    "name": "HO CHI MINH CITY Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/cb203e3c-d543-45f0-a454-7b3c9bd14776.jpg",
+      "https://example.com/images/hotel/356f27c9-9e3e-4cd5-8c3a-1fff1b3ce6ee.jpg",
+      "https://example.com/images/hotel/acf3e465-9a5a-410a-840a-de0d772938eb.jpg",
+      "https://example.com/images/hotel/d7195c37-b480-4318-a6f7-0f40e6947f02.jpg"
+    ],
+    "rooms": [
+      "e4be9755-bf23-46f3-b365-d95c06187f7f"
+    ],
+    "title": "HO CHI MINH CITY Golden Star 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "09733113-f0ec-4e0d-a855-20ae6a424d02"
+    },
+    "address": "District 1, 691 Pham Ngu Lao, Ha Noi, Vietnam",
+    "cheapestPrice": 235,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "1",
+    "featured": false,
+    "name": "HA NOI Sunrise Hotel 5",
+    "photos": [
+      "https://example.com/images/hotel/d5c76044-26c9-48a8-b8ce-fc7f08764b9d.jpg",
+      "https://example.com/images/hotel/90cb96a9-e63c-4d9b-9bc7-1518a626502d.jpg",
+      "https://example.com/images/hotel/f28e92bc-6397-4614-add5-b9c31a8a3650.jpg",
+      "https://example.com/images/hotel/22d06fca-f2bf-4604-9747-97bdee802c1f.jpg"
+    ],
+    "rooms": [
+      "e0774d59-c3ed-457e-9441-1d747e32c9bf"
+    ],
+    "title": "HA NOI Sunrise Hotel 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "d4f7a3f6-0403-4da8-a077-4826e92880ef"
+    },
+    "address": "District 1, 788 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 205,
+    "city": "Ha Noi",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "11",
+    "featured": false,
+    "name": "HA NOI Urban Retreat 1",
+    "photos": [
+      "https://example.com/images/hotel/2eed3cb1-e29a-484d-8b97-7be1c928c2f2.jpg",
+      "https://example.com/images/hotel/332d603e-b167-406d-93f8-2a77bd04f830.jpg",
+      "https://example.com/images/hotel/f589f099-0a04-47a2-bdcc-0a9ba00ca9f8.jpg",
+      "https://example.com/images/hotel/05ea9fa4-fda9-49aa-95ae-b4730eccc947.jpg"
+    ],
+    "rooms": [
+      "5544886c-6a59-4e54-8673-2ce398be1f88"
+    ],
+    "title": "HA NOI Urban Retreat 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "ba61f312-8a31-4cb1-beb5-6dc99572fe3f"
+    },
+    "address": "District 1, 491 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 133,
+    "city": "Ho Chi Minh City",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "1",
+    "featured": false,
+    "name": "HO CHI MINH CITY Luxury Stay 2",
+    "photos": [
+      "https://example.com/images/hotel/d705ccf0-d53d-4056-82cd-58d1fe794af1.jpg",
+      "https://example.com/images/hotel/dc40d4dc-a453-4d57-a624-8028add4ca49.jpg",
+      "https://example.com/images/hotel/a89e98ab-2ae8-4ff9-bd3b-8e351fa8cd19.jpg",
+      "https://example.com/images/hotel/510c5bf1-3b6a-4dfe-a4ae-b1ad3f381e9b.jpg"
+    ],
+    "rooms": [
+      "6c2b4916-100b-4d92-95f5-24037c0714c1"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 2",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "0adbf47d-d3f1-4bd3-a663-f57e8eed5b19"
+    },
+    "address": "District 1, 892 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 250,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "18",
+    "featured": true,
+    "name": "HO CHI MINH CITY Luxury Stay 1",
+    "photos": [
+      "https://example.com/images/hotel/cc802c69-0b3c-4a1a-b605-bddc1d5d3ac6.jpg",
+      "https://example.com/images/hotel/ebc3a3e4-5bfd-4975-8d54-c788ba12a6e5.jpg",
+      "https://example.com/images/hotel/b58c2925-8f2f-4281-addb-b0a7164f03b9.jpg",
+      "https://example.com/images/hotel/edd9b127-18c1-4724-9f1a-7ed46f979a26.jpg"
+    ],
+    "rooms": [
+      "dd154196-5541-40ec-8f69-6a2508f9be7b"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 1",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "7b456adc-727f-4bc7-8174-06a532aa141d"
+    },
+    "address": "Ancient Town, 670 Hang Bong, Hue, Vietnam",
+    "cheapestPrice": 150,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "14",
+    "featured": false,
+    "name": "HUE Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/11f41510-cfe5-4f85-a950-780558a409f5.jpg",
+      "https://example.com/images/hotel/f293456a-8581-43df-9b9f-087d515c9f57.jpg",
+      "https://example.com/images/hotel/14732918-7cbf-44ec-af1c-92731b2c9262.jpg",
+      "https://example.com/images/hotel/1b80d2f2-4dc7-436b-ae88-47eb0594fdc4.jpg"
+    ],
+    "rooms": [
+      "db95e13f-d932-47ce-b242-99ed06f74a1e"
+    ],
+    "title": "HUE Golden Star 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "cefc6f26-6e84-4c3f-a269-120e92c66f93"
+    },
+    "address": "District 1, 883 Le Loi, Da Nang, Vietnam",
+    "cheapestPrice": 127,
+    "city": "Da Nang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "10",
+    "featured": true,
+    "name": "DA NANG Royal Palace 5",
+    "photos": [
+      "https://example.com/images/hotel/45cd3e14-fce9-462f-808d-b0b9e86dd278.jpg",
+      "https://example.com/images/hotel/7d43f599-1110-47f5-a346-b32568adab3f.jpg",
+      "https://example.com/images/hotel/638dfd5b-a66b-4fd8-a534-44a57d16a273.jpg",
+      "https://example.com/images/hotel/3a25a159-3f36-4315-a31a-5e94560ffc25.jpg"
+    ],
+    "rooms": [
+      "41757a1f-5b9b-4fbc-9b0c-3a1e0032f972"
+    ],
+    "title": "DA NANG Royal Palace 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "9a6c8ffb-6ce3-4329-ab12-1179143fe1c9"
+    },
+    "address": "Old Quarter, 843 Hang Bong, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 120,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "15",
+    "featured": false,
+    "name": "HO CHI MINH CITY Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/17ecf09e-e7b9-43d2-89f5-bff8df272990.jpg",
+      "https://example.com/images/hotel/ecbc2d84-6280-414b-afa0-a70bcb3200bf.jpg",
+      "https://example.com/images/hotel/5531e89a-ee45-4894-84a5-270e0946d230.jpg",
+      "https://example.com/images/hotel/9a184e67-680d-4ef8-8298-9b01de738957.jpg"
+    ],
+    "rooms": [
+      "83c17f6b-829f-4f07-8c25-aa671f7b124a"
+    ],
+    "title": "HO CHI MINH CITY Urban Retreat 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "a5c422bd-3d82-4ee9-9d93-90ac928dac9a"
+    },
+    "address": "Ancient Town, 534 Hang Bong, Hue, Vietnam",
+    "cheapestPrice": 51,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "3",
+    "featured": true,
+    "name": "HUE Royal Palace 4",
+    "photos": [
+      "https://example.com/images/hotel/1ccacb85-e308-4d45-9176-a2be18163df3.jpg",
+      "https://example.com/images/hotel/bea0ecf6-a496-45ce-9c12-5fc5894692ed.jpg",
+      "https://example.com/images/hotel/ee6c546d-9914-4170-834e-1b58297cc546.jpg",
+      "https://example.com/images/hotel/c634c081-c11b-4673-b096-b7e68f91eea7.jpg"
+    ],
+    "rooms": [
+      "ea6178b8-6c32-4703-9b66-49590d4a9815"
+    ],
+    "title": "HUE Royal Palace 4",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "b43ce34e-7d28-43bd-b82b-fdc6ecb6ce5f"
+    },
+    "address": "Old Quarter, 146 Tran Phu, Da Nang, Vietnam",
+    "cheapestPrice": 169,
+    "city": "Da Nang",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "19",
+    "featured": false,
+    "name": "DA NANG Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/0f2eaa14-9b36-4bf5-949f-7c16dc66a4da.jpg",
+      "https://example.com/images/hotel/5fa1c01c-cbb8-4f0b-a908-587ba256048e.jpg",
+      "https://example.com/images/hotel/247c87b2-60c6-48bd-b8db-ed4a783a024d.jpg",
+      "https://example.com/images/hotel/2658f9d4-b5c8-4754-8052-e16ee362bc8a.jpg"
+    ],
+    "rooms": [
+      "2d8df8a4-cc99-40be-9874-931da22a8851"
+    ],
+    "title": "DA NANG Golden Star 3",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "18b683b1-6761-49ef-a37e-411cb923955d"
+    },
+    "address": "Ancient Town, 897 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 169,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "7",
+    "featured": true,
+    "name": "HA NOI Royal Palace 3",
+    "photos": [
+      "https://example.com/images/hotel/672d9665-c92a-4e20-926f-a34273e81aeb.jpg",
+      "https://example.com/images/hotel/343c5bc7-3c86-4908-8e6c-2bc0b0cdba60.jpg",
+      "https://example.com/images/hotel/d72bc404-52ce-4879-b621-1f47ccbf5daf.jpg",
+      "https://example.com/images/hotel/19cd115a-586e-4a6f-960c-381e2a77efdf.jpg"
+    ],
+    "rooms": [
+      "16345bc3-6892-484d-ab18-4d1c964938ab"
+    ],
+    "title": "HA NOI Royal Palace 3",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "1df49fe9-12aa-4569-8463-728bbabec677"
+    },
+    "address": "City Center, 967 Le Loi, Ha Noi, Vietnam",
+    "cheapestPrice": 263,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "15",
+    "featured": false,
+    "name": "HA NOI Golden Star 3",
+    "photos": [
+      "https://example.com/images/hotel/cba12043-fa69-4a30-bcde-fb17c66658c3.jpg",
+      "https://example.com/images/hotel/37cc194d-13d3-438a-8a00-7a4aff40174c.jpg",
+      "https://example.com/images/hotel/f29e3626-338e-452b-a563-2789d58f4cbd.jpg",
+      "https://example.com/images/hotel/7a1f7483-a550-4b65-8018-3f2ddd07719e.jpg"
+    ],
+    "rooms": [
+      "ec63963f-547d-40dc-acfd-af3e3818a6d7"
+    ],
+    "title": "HA NOI Golden Star 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "798a1f1a-02e9-4775-9e6c-ada0e3bef1d3"
+    },
+    "address": "District 1, 168 Hang Bong, Da Nang, Vietnam",
+    "cheapestPrice": 225,
+    "city": "Da Nang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "12",
+    "featured": false,
+    "name": "DA NANG Urban Retreat 1",
+    "photos": [
+      "https://example.com/images/hotel/3a97961d-5a67-4fc2-b9a7-b1eda0a7e694.jpg",
+      "https://example.com/images/hotel/d2a92288-73ad-4666-9d53-f8d02fdece5a.jpg",
+      "https://example.com/images/hotel/792da7d8-4717-40a3-ad38-0660b4e28b37.jpg",
+      "https://example.com/images/hotel/9912d965-3941-4dcb-ad45-d478c4c997f8.jpg"
+    ],
+    "rooms": [
+      "2aa81756-94d7-4ad5-9bc0-cde13f13e026"
+    ],
+    "title": "DA NANG Urban Retreat 1",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "39f72225-3bd9-4070-aead-95650fd1571c"
+    },
+    "address": "Old Quarter, 879 Hang Bong, Hue, Vietnam",
+    "cheapestPrice": 290,
+    "city": "Hue",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "1",
+    "featured": false,
+    "name": "HUE Sunrise Hotel 3",
+    "photos": [
+      "https://example.com/images/hotel/d01e5e92-4bd0-4cc0-ba87-61782d7a7393.jpg",
+      "https://example.com/images/hotel/d198b7a5-9975-4bcf-92f6-b5a24c9a3ee2.jpg",
+      "https://example.com/images/hotel/6974b183-ba43-4d4f-ae37-fe5335cc4cc8.jpg",
+      "https://example.com/images/hotel/1934a57a-7553-4938-8233-42aba16ade0d.jpg"
+    ],
+    "rooms": [
+      "d082618f-87f2-42e3-bc93-9d7b9c89f34b"
+    ],
+    "title": "HUE Sunrise Hotel 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "8782c1b7-1ea1-4bd6-bb91-916f6550c6a2"
+    },
+    "address": "Beachfront, 882 Hang Bong, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 183,
+    "city": "Ho Chi Minh City",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "2",
+    "featured": false,
+    "name": "HO CHI MINH CITY Sunrise Hotel 5",
+    "photos": [
+      "https://example.com/images/hotel/0699653f-aeb9-4316-842b-ed99be346720.jpg",
+      "https://example.com/images/hotel/2e34d5ff-3681-490c-8af8-48dfb8ca757d.jpg",
+      "https://example.com/images/hotel/7c387c5a-0b06-4526-8b51-a9d652c9341a.jpg",
+      "https://example.com/images/hotel/8a0beeb2-7019-4601-b7bc-6970ef09b6c7.jpg"
+    ],
+    "rooms": [
+      "544c7b5a-6748-4d01-bf24-438f9dceb2a9"
+    ],
+    "title": "HO CHI MINH CITY Sunrise Hotel 5",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "060b36a8-6d21-4bea-88db-4e3ad4cfedf8"
+    },
+    "address": "Beachfront, 111 Pham Ngu Lao, Hue, Vietnam",
+    "cheapestPrice": 259,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "17",
+    "featured": true,
+    "name": "HUE Urban Retreat 5",
+    "photos": [
+      "https://example.com/images/hotel/f6d8bf78-0489-4747-912d-a90c35449caf.jpg",
+      "https://example.com/images/hotel/254e2d69-2fca-44fc-95f9-a672e2d4527a.jpg",
+      "https://example.com/images/hotel/122481f5-1e9e-4f47-8257-70395f52e289.jpg",
+      "https://example.com/images/hotel/0433fa62-0a49-47c9-9433-4b64760a29bf.jpg"
+    ],
+    "rooms": [
+      "83986a44-4cad-4cc4-b533-4612f6d4ffb0"
+    ],
+    "title": "HUE Urban Retreat 5",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "b9c6d581-7622-4cc0-ac0d-c16c84dff884"
+    },
+    "address": "City Center, 601 Pham Ngu Lao, Da Nang, Vietnam",
+    "cheapestPrice": 170,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "15",
+    "featured": false,
+    "name": "DA NANG Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/32f3c7a3-e046-45d2-b9c9-5fab8df400b8.jpg",
+      "https://example.com/images/hotel/f44c42e9-cd6e-4490-9ab1-dc4aa86d6c70.jpg",
+      "https://example.com/images/hotel/4f797618-c8c2-4366-8c53-d54c37ddb2ca.jpg",
+      "https://example.com/images/hotel/9b09efef-c88d-4c30-bc50-16f3be7be997.jpg"
+    ],
+    "rooms": [
+      "b50531f5-2cd6-4dc7-a233-35950a61391c"
+    ],
+    "title": "DA NANG Urban Retreat 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "4669c3c9-c0cb-45f1-a8ac-6904ec57159e"
+    },
+    "address": "City Center, 105 Le Loi, Hue, Vietnam",
+    "cheapestPrice": 284,
+    "city": "Hue",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "6",
+    "featured": true,
+    "name": "HUE Golden Star 5",
+    "photos": [
+      "https://example.com/images/hotel/5bec33a0-8676-473d-a5c8-a3b9a9db201d.jpg",
+      "https://example.com/images/hotel/93394bda-c47f-4f1f-91ab-7799d038ca47.jpg",
+      "https://example.com/images/hotel/f021ddf7-2180-4c89-b4ae-32f79250eeba.jpg",
+      "https://example.com/images/hotel/ebb8fe30-055b-49d6-bea2-247f19358162.jpg"
+    ],
+    "rooms": [
+      "887bdd3d-4566-4fcc-8382-4b0c1954b966"
+    ],
+    "title": "HUE Golden Star 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "db155b89-034c-4cfc-8d8c-d7b760764a92"
+    },
+    "address": "Old Quarter, 100 Pham Ngu Lao, Hue, Vietnam",
+    "cheapestPrice": 63,
+    "city": "Hue",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "1",
+    "featured": true,
+    "name": "HUE Sunrise Hotel 2",
+    "photos": [
+      "https://example.com/images/hotel/69efb212-a2e3-4995-b868-c70de5515880.jpg",
+      "https://example.com/images/hotel/dae05850-2b14-490b-99a2-432b013d40ed.jpg",
+      "https://example.com/images/hotel/dd073e78-5142-42f9-abd7-00d37bccd0c6.jpg",
+      "https://example.com/images/hotel/477fab34-171b-4950-bc66-8e1d74f4f156.jpg"
+    ],
+    "rooms": [
+      "9c991b57-8ddc-400b-8a25-ce8f033f60a4"
+    ],
+    "title": "HUE Sunrise Hotel 2",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "ffa39f9f-cb34-4c21-8f99-eacc13b0096c"
+    },
+    "address": "Old Quarter, 257 Le Loi, Nha Trang, Vietnam",
+    "cheapestPrice": 128,
+    "city": "Nha Trang",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "10",
+    "featured": true,
+    "name": "NHA TRANG Luxury Stay 2",
+    "photos": [
+      "https://example.com/images/hotel/22fa0d5c-cac3-4577-b1ab-e2e4a03b6205.jpg",
+      "https://example.com/images/hotel/bec34aa2-bd05-4907-94f9-ca3cbe964831.jpg",
+      "https://example.com/images/hotel/43904b86-a53e-4421-a0e0-97d3f97d3aa5.jpg",
+      "https://example.com/images/hotel/ab13068c-6da9-4a64-8362-17ebe0ef9da0.jpg"
+    ],
+    "rooms": [
+      "0073176b-b7f7-4cac-b116-2f6f0182514d"
+    ],
+    "title": "NHA TRANG Luxury Stay 2",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "20b7ddaf-cc52-4df9-9597-f09d6b262d98"
+    },
+    "address": "District 1, 234 Hang Bong, Ha Noi, Vietnam",
+    "cheapestPrice": 209,
+    "city": "Ha Noi",
+    "desc": "Strategically placed near top attractions and transport hubs.",
+    "distance": "2",
+    "featured": false,
+    "name": "HA NOI Luxury Stay 2",
+    "photos": [
+      "https://example.com/images/hotel/11880994-7a1b-4747-aa35-80f548c4f44d.jpg",
+      "https://example.com/images/hotel/edc78c42-f1bb-4813-9a01-95170a24432d.jpg",
+      "https://example.com/images/hotel/717faebe-f370-4b88-bc82-6120fa6fb126.jpg",
+      "https://example.com/images/hotel/9ec79e43-82d6-42e8-9e89-b08fb109e60a.jpg"
+    ],
+    "rooms": [
+      "beb280b0-7f00-47a2-8e0f-ac71b46b77a6"
+    ],
+    "title": "HA NOI Luxury Stay 2",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "4064011c-c8f3-487b-bec3-8a777d8267ec"
+    },
+    "address": "Ancient Town, 788 Tran Phu, Da Nang, Vietnam",
+    "cheapestPrice": 66,
+    "city": "Da Nang",
+    "desc": "Perfectly located to explore the city. Free Wi-Fi and airport transfer.",
+    "distance": "16",
+    "featured": true,
+    "name": "DA NANG Golden Star 4",
+    "photos": [
+      "https://example.com/images/hotel/d4c4db2a-bbab-4c4c-a0bc-5abea1894ed1.jpg",
+      "https://example.com/images/hotel/eb2b5df0-a943-42f0-9a20-9fb15cc0c936.jpg",
+      "https://example.com/images/hotel/737d7087-1c12-460b-b0ff-ebc6fc74e091.jpg",
+      "https://example.com/images/hotel/1782fc86-2126-477c-8595-3847c2741cc6.jpg"
+    ],
+    "rooms": [
+      "aef2b4ca-e4ad-4841-a551-97fb51922134"
+    ],
+    "title": "DA NANG Golden Star 4",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "d56ffa1f-0be2-44be-9456-e44d8bdcaecb"
+    },
+    "address": "District 1, 368 Nguyen Trai, Hue, Vietnam",
+    "cheapestPrice": 176,
+    "city": "Hue",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "5",
+    "featured": false,
+    "name": "HUE Golden Star 4",
+    "photos": [
+      "https://example.com/images/hotel/b3c7378d-b5fb-4605-b5bf-0a9990bef942.jpg",
+      "https://example.com/images/hotel/7463b648-259d-467d-8035-0d0c2f524ab0.jpg",
+      "https://example.com/images/hotel/f91a011a-c39e-4428-8d6e-9b473d2024c5.jpg",
+      "https://example.com/images/hotel/2715b6e9-52e5-4173-b109-9797d9e64056.jpg"
+    ],
+    "rooms": [
+      "bd5c77f0-f2a9-4677-b90f-97896c697d4c"
+    ],
+    "title": "HUE Golden Star 4",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "daf4c929-8d51-45f9-a910-1f22105d9053"
+    },
+    "address": "Ancient Town, 120 Hang Bong, Nha Trang, Vietnam",
+    "cheapestPrice": 80,
+    "city": "Nha Trang",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "8",
+    "featured": true,
+    "name": "NHA TRANG Golden Star 5",
+    "photos": [
+      "https://example.com/images/hotel/8415acdc-f20f-4896-a660-01d013e89b9e.jpg",
+      "https://example.com/images/hotel/814cb254-7857-4d81-aca5-34ce369a4e3c.jpg",
+      "https://example.com/images/hotel/e0899323-6a20-4f37-b2c7-3bfef7a7b758.jpg",
+      "https://example.com/images/hotel/a29d959d-7190-46fb-859a-db87707669bd.jpg"
+    ],
+    "rooms": [
+      "a37d7fc4-5409-46f6-998a-cdbbbbe8dd67"
+    ],
+    "title": "NHA TRANG Golden Star 5",
+    "type": "hotel",
+    "rating": 4
+  },
+  {
+    "_id": {
+      "$oid": "d5816569-5000-42b1-8294-7a59d7baf5d1"
+    },
+    "address": "Beachfront, 873 Tran Phu, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 177,
+    "city": "Ho Chi Minh City",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "14",
+    "featured": false,
+    "name": "HO CHI MINH CITY Royal Palace 4",
+    "photos": [
+      "https://example.com/images/hotel/178426ee-1769-40d9-a801-a3fa50e8db53.jpg",
+      "https://example.com/images/hotel/d04ead10-423a-4b8f-9171-3f5f28d28d44.jpg",
+      "https://example.com/images/hotel/c11daa25-a86c-4c05-9500-8e2813414c2c.jpg",
+      "https://example.com/images/hotel/b2945493-e6d6-43d6-b5a3-78c0144012d9.jpg"
+    ],
+    "rooms": [
+      "a17357b2-c40c-4223-9228-272ece47cd78"
+    ],
+    "title": "HO CHI MINH CITY Royal Palace 4",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "b1e94b3c-17e2-4ec1-b013-a97f544a9483"
+    },
+    "address": "City Center, 255 Hang Bong, Hue, Vietnam",
+    "cheapestPrice": 245,
+    "city": "Hue",
+    "desc": "Relax in style at this 4-star property with rooftop pool and gym.",
+    "distance": "12",
+    "featured": false,
+    "name": "HUE Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/17d78d37-efbc-4483-b465-c3344d7ae7f0.jpg",
+      "https://example.com/images/hotel/d0d1c69e-e8ec-442b-96e1-db1a4de618df.jpg",
+      "https://example.com/images/hotel/66306192-7f98-4029-bbb4-f2fb4c785c2e.jpg",
+      "https://example.com/images/hotel/d85ba030-f838-40e8-86a7-f84aab4e61a2.jpg"
+    ],
+    "rooms": [
+      "a355d68e-ecf5-4f11-a22a-2c760e28c8c0"
+    ],
+    "title": "HUE Royal Palace 1",
+    "type": "hotel",
+    "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "2643fea7-ec1b-4571-be02-ad8f39227709"
+    },
+    "address": "District 1, 973 Nguyen Trai, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 294,
+    "city": "Ho Chi Minh City",
+    "desc": "Enjoy your stay with premium services including spa, bar and breakfast.",
+    "distance": "11",
+    "featured": true,
+    "name": "HO CHI MINH CITY Luxury Stay 3",
+    "photos": [
+      "https://example.com/images/hotel/85e7f328-0234-4786-8cf0-f4cfa94b664d.jpg",
+      "https://example.com/images/hotel/0fe4ae33-f6f4-4ffe-9cf6-0354b1c821b5.jpg",
+      "https://example.com/images/hotel/402fad9f-de73-46ec-b8c8-d230325c40b4.jpg",
+      "https://example.com/images/hotel/c3a8d49e-0bb0-4f8a-835b-df027c162516.jpg"
+    ],
+    "rooms": [
+      "eb855db8-3070-4f18-b22b-9aa8aaf57568"
+    ],
+    "title": "HO CHI MINH CITY Luxury Stay 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "5063d18e-937e-41c1-9ab0-b1a980f24adc"
+    },
+    "address": "District 1, 934 Pham Ngu Lao, Ho Chi Minh City, Vietnam",
+    "cheapestPrice": 235,
+    "city": "Ho Chi Minh City",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "2",
+    "featured": true,
+    "name": "HO CHI MINH CITY Urban Retreat 3",
+    "photos": [
+      "https://example.com/images/hotel/7f9a6711-c602-4fda-adde-20e21d79aee7.jpg",
+      "https://example.com/images/hotel/5fc34ef9-a5a2-4331-82e7-c70f2e78b6f0.jpg",
+      "https://example.com/images/hotel/6ed83ea6-e55a-4475-8d6d-9079598c0ad1.jpg",
+      "https://example.com/images/hotel/621404b6-a341-4051-a56f-bd04f6d785f1.jpg"
+    ],
+    "rooms": [
+      "421c3fe2-f772-4e60-adc2-0f49e819018c"
+    ],
+    "title": "HO CHI MINH CITY Urban Retreat 3",
+    "type": "hotel",
+    "rating": 3
+  },
+  {
+    "_id": {
+      "$oid": "e094e43b-625f-4538-86ff-38c3ff2fbf7a"
+    },
+    "address": "Beachfront, 203 Nguyen Trai, Ha Noi, Vietnam",
+    "cheapestPrice": 281,
+    "city": "Ha Noi",
+    "desc": "Experience local culture and comfort in every corner of our hotel.",
+    "distance": "5",
+    "featured": false,
+    "name": "HA NOI Royal Palace 1",
+    "photos": [
+      "https://example.com/images/hotel/94d1e60c-cf51-469e-99ea-faf3a4d1d74e.jpg",
+      "https://example.com/images/hotel/da469894-fd91-4bfb-9682-7d2b617f8244.jpg",
+      "https://example.com/images/hotel/7f63cfbc-e6cb-4be0-8fb8-3ec9d0271e0e.jpg",
+      "https://example.com/images/hotel/52479850-4a14-45d3-a759-9e782f57937e.jpg"
+    ],
+    "rooms": [
+      "9e755cf9-2874-4d04-9322-81832c37501b"
+    ],
+    "title": "HA NOI Royal Palace 1",
+    "type": "hotel",
+    "rating": 5
+  }
+]
