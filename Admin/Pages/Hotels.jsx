@@ -40,7 +40,6 @@ const Hotels = () => {
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
-        console.log(bookings);
         setNumberOrders(data.length);
         const totalEarnings = data.reduce(
           (acc, booking) => acc + booking.totalPrice,
@@ -76,6 +75,11 @@ const Hotels = () => {
         setHotels(hotels.filter((hotel) => hotel._id !== hotelId));
       })
       .catch((err) => console.error("Lỗi xóa khách sạn:", err));
+  };
+
+  // edit phòng
+  const handleEditHotel = (hotelId) => {
+    navigate(`/edit-hotel/${hotelId}`);
   };
 
   const handleAddHotel = () => {
@@ -162,6 +166,7 @@ const Hotels = () => {
                     <th className="py-4 px-6 border">Type</th>
                     <th className="py-4 px-6 border">Rating</th>
                     <th className="py-4 px-6 border">Action</th>
+                    <th className="py-4 px-6 border">Edit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -194,6 +199,22 @@ const Hotels = () => {
                           }}
                         >
                           Delete
+                        </button>
+                      </td>
+                      <td className="py-2 px-3 border">
+                        <button
+                          onClick={() => handleEditHotel(b._id)}
+                          className="bg-blue-500 text-white px-4 py-2 rounded"
+                          style={{
+                            padding: "10px 20px",
+                            backgroundColor: "#008CBA",
+                            color: "white",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          Edit
                         </button>
                       </td>
                     </tr>

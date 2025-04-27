@@ -46,6 +46,9 @@ router.post("/room_post", userController.postRoom);
 // Đường dẫn lấy dữ liệu room từ mongo compass
 router.get("/room/:id", userController.getRoomsByHotelId);
 
+// Đường dẫn lấy dữ liệu room từ mongo compass
+router.get("/rooms/:id", userController.getRoomById);
+
 // Đường dẫn lấy dữ liệu hotel từ mongodb compass
 router.get("/hotels/search", userController.getSearchPage);
 
@@ -64,9 +67,15 @@ router.delete("/hotel/:id", userController.deleteHotel);
 // Đường dẫn xóa room
 router.delete("/room/:id", userController.deleteRoom);
 
-// Đường dẫn lấy tất cả hotel\
+// Đường dẫn lấy tất cả hotel
 router.get("/hotel", userController.getAllHotel);
 
 // Đường dẫn xóa user theo id
 router.delete("/user/:id", userController.getUserById);
+
+// Đường dẫn edit phòng theo id
+router.put("/edit-room/:id", userController.editRoom);
+
+// Đường dẫn edit hotel theo id
+router.put("/edit-hotel/:id", userController.editHotel);
 module.exports = router;

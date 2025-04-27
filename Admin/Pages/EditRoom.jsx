@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/navbar";
 import "./Rooms.css";
+import { useNavigate, useParams } from "react-router-dom";
 
-const NewRoomForm = () => {
+const UpdateRoom = () => {
   const [user, setUser] = useState(null);
+
+  const navigator = useNavigate();
 
   const [name, setName] = useState("");
   const [type, setType] = useState("");
@@ -13,6 +16,8 @@ const NewRoomForm = () => {
   const [roomNumbers, setRoomNumbers] = useState("");
 
   const [errors, setErrors] = useState({});
+
+  const { roomId } = useParams(); // Lấy id từ URL
 
   // validate dữ liệu
   const validate = () => {
@@ -35,9 +40,34 @@ const NewRoomForm = () => {
       .catch((err) => console.error("Lỗi lấy user:", err));
   }, []);
 
-  const handleSubmit = async () => {
+  // Lấy thông tin phòng để edit
+  useEffect(() => {
+    const fetchRoom = async () => {
+      try {
+        const fetchRoom = await fetch(
+          `http://localhost:5000/api/rooms/${roomId}`
+        );
+        if (!fetchRoom.ok) {
+          throw new Error("Failed to fetch room data");
+        }
+        const data = await fetchRoom.json();
+        setName(data.name || "");
+        setType(data.type || "");
+        setPrice(data.price || "");
+        setMaxPeople(data.maxPeople || "");
+        setDesc(data.desc || "");
+        setRoomNumbers(data.roomNumbers.join(", ") || ""); // Chuyển đổi mảng thành chuỗi
+      } catch (err) {
+        console.error("Lỗi lấy room:", err);
+      }
+    };
+    fetchRoom();
+  }, [roomId]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!validate()) return;
-    const newRoom = {
+    const updateRoom = {
       name,
       type,
       price: parseFloat(price),
@@ -47,12 +77,12 @@ const NewRoomForm = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/room_post", {
-        method: "POST",
+      const res = await fetch(`http://localhost:5000/api/edit-room/${roomId}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newRoom),
+        body: JSON.stringify(updateRoom),
       });
 
       const result = await res.json();
@@ -61,13 +91,7 @@ const NewRoomForm = () => {
       alert("Đã thêm phòng mới thành công!");
       console.log("Người dùng:", user);
 
-      // Reset form
-      setName("");
-      setType("");
-      setPrice("");
-      setMaxPeople("");
-      setDesc("");
-      setRoomNumbers("");
+      navigator("/rooms");
     } catch (err) {
       console.error("Lỗi khi thêm phòng:", err.message);
       alert("Lỗi khi thêm phòng: " + err.message);
@@ -82,7 +106,7 @@ const NewRoomForm = () => {
 
       <div className="col-span-1 md:col-span-4 p-6 dashboard-container">
         <div className="new_hotel shadow-md bg-white p-4 rounded-lg mb-4">
-          <h1 className="text-2xl font-bold mb-4">Tạo Phòng Mới</h1>
+          <h1 className="text-2xl font-bold mb-4">Chỉnh sửa Room</h1>
         </div>
 
         <div className="new-room-list bg-white p-6 rounded-lg shadow-md grid grid-cols-2 gap-6">
@@ -149,7 +173,7 @@ const NewRoomForm = () => {
               className="btn-send bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
               onClick={handleSubmit}
             >
-              Send
+              Update Room
             </button>
           </div>
         </div>
@@ -158,4 +182,4 @@ const NewRoomForm = () => {
   );
 };
 
-export default NewRoomForm;
+export default UpdateRoom;

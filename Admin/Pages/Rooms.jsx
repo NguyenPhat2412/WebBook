@@ -70,7 +70,6 @@ const Rooms = () => {
   };
 
   // Xóa room theo id
-
   const deleteRoom = async (id) => {
     const response = await fetch(`http://localhost:5000/api/room/${id}`, {
       method: "DELETE",
@@ -81,6 +80,11 @@ const Rooms = () => {
     } else {
       console.error("Failed to delete room");
     }
+  };
+
+  // edit room theo id
+  const handleEditRoom = (id) => {
+    navigate(`/edit-room/${id}`);
   };
 
   // Phân trang
@@ -164,6 +168,7 @@ const Rooms = () => {
                     <th className="py-4 px-6 border">Title</th>
                     <th className="py-4 px-6 border">UpdateAt</th>
                     <th className="py-4 px-6 border">Action</th>
+                    <th className="py-4 px-6 border">Edit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -190,6 +195,17 @@ const Rooms = () => {
                           }}
                         >
                           Delete
+                        </button>
+                      </td>
+                      <td className="py-2 px-3 border">
+                        <button
+                          onClick={() => handleEditRoom(b._id)}
+                          className="bg-blue-500 text-white px-2 py-1 rounded"
+                          style={{
+                            padding: "10px 20px",
+                          }}
+                        >
+                          Edit
                         </button>
                       </td>
                     </tr>

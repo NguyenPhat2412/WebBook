@@ -9,6 +9,8 @@ import NewHotel from "../Pages/NewHotel";
 import NewRoom from "../Pages/NewRoom";
 import RegisterPage from "../Pages/Register/register";
 import LoginPage from "../Pages/Login/login";
+import EditHotel from "../Pages/EditHotel";
+import EditRoom from "../Pages/EditRoom";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <Route path="/new_room" element={<NewRoom />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/edit-hotel/:hotelId" element={<EditHotel />} />
+        <Route path="/edit-room/:roomId" element={<EditRoom />} />
       </Routes>
     </BrowserRouter>
   );

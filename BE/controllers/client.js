@@ -279,6 +279,21 @@ exports.getHotelById = (req, res) => {
     });
 };
 
+// Lấy dữ liệu room từ mongodb compass theo id
+exports.getRoomById = (req, res) => {
+  const { id } = req.params;
+  Room.findById(id)
+    .then((room) => {
+      if (!room) {
+        return res.status(404).json({ message: "Room not found" });
+      }
+      res.status(200).json(room);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
 exports.postBooking = (req, res) => {
   const {
     userInfo,
@@ -395,6 +410,63 @@ exports.getUserById = async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
     res.status(200).json({ message: "User deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// chức năng edit khách sạn
+exports.editHotel = async (req, res) => {
+  const { id } = req.params;
+  const { name, type, city, address, distance, photos, desc, rating } =
+    req.body;
+
+  try {
+    const hotel = await Hotel.findByIdAndUpdate(
+      id,
+      {
+        name,
+        type,
+        city,
+        address,
+        distance,
+        photos,
+        desc,
+        rating,
+      },
+      { new: true }
+    );
+    if (!hotel) {
+      return res.status(404).json({ error: "Hotel not found" });
+    }
+    res.status(200).json(hotel);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// chức năng edit phòng
+exports.editRoom = async (req, res) => {
+  const { id } = req.params;
+  const { name, typenơ, price, maxPeople, desc, roomNumbers } = req.body;
+
+  try {
+    const room = await Room.findByIdAndUpdate(
+      id,
+      {
+        name,
+        type,
+        price,
+        maxPeople,
+        desc,
+        roomNumbers,
+      },
+      { new: true }
+    );
+    if (!room) {
+      return res.status(404).json({ error: "Room not found" });
+    }
+    res.status(200).json(room);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
