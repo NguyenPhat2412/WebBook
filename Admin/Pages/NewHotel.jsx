@@ -12,10 +12,11 @@ const NewHotel = () => {
   const [type, setType] = useState("");
   const [address, setAddress] = useState("");
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
+  const [cheapestPrice, setPrice] = useState("");
   const [featured, setFeatured] = useState(false);
-  const [rooms, setRooms] = useState("");
+  const [rooms, setRooms] = useState([]);
   const [photos, setPhotos] = useState("");
+  const [selectedRooms, setSelectedRooms] = useState([]);
 
   const [errors, setErrors] = useState({});
 
@@ -29,17 +30,35 @@ const NewHotel = () => {
     if (!type.trim()) newErrors.type = "Type is required";
     if (!address.trim()) newErrors.address = "Address is required";
     if (!title.trim()) newErrors.title = "Title is required";
-    if (!price) newErrors.price = "Price is required";
-    if (!rooms.trim()) newErrors.rooms = "Rooms is required";
+    if (!cheapestPrice) newErrors.price = "Price is required";
+    if (!rooms) newErrors.rooms = "Rooms is required";
     if (!photos.trim()) newErrors.photos = "Photos are required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  // lấy thông tin của tất cả các phòng
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/room");
+        if (!res.ok) {
+          throw new Error("Failed to fetch rooms data");
+        }
+        const data = await res.json();
+        // console.log(data);
+        setRooms(data);
+      } catch (err) {
+        console.error("Lỗi lấy tất cả các phòng:", err);
+      }
+    };
+    fetchRooms();
+  }, []);
+
   useEffect(() => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
-      .then((data) => setUser(data[0])) // giả sử chỉ cần lấy 1 user
+      .then((data) => setUser(data)) // giả sử chỉ cần lấy 1 user
       .catch((err) => console.error("Lỗi lấy user:", err));
   }, []);
 
@@ -54,9 +73,9 @@ const NewHotel = () => {
       type,
       address,
       title,
-      price: parseFloat(price),
+      cheapestPrice: parseFloat(cheapestPrice),
       featured,
-      rooms,
+      rooms: selectedRooms.map((id) => id.toString()),
       photos: photos.split(",").map((url) => url.trim()),
     };
 
@@ -69,11 +88,12 @@ const NewHotel = () => {
         body: JSON.stringify(newHotel),
       });
       const result = await res.json();
+      console.log(result);
       if (!res.ok) {
         throw new Error(result.message || "Failed to add hotel");
       }
       alert("Đã thêm phòng mới thành công!");
-      console.log(user);
+      console.log("Dữ liệu gửi đi:", newHotel);
     } catch (err) {
       console.error("Lỗi khi thêm phòng:", err);
     }
@@ -86,7 +106,7 @@ const NewHotel = () => {
     setTitle("");
     setPrice("");
     setFeatured(false);
-    setRooms("");
+    // setRooms("");
     setPhotos("");
   };
 
@@ -116,11 +136,16 @@ const NewHotel = () => {
 
             <div>
               <label>City</label>
-              <input
+              <select
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="New York"
-              />
+              >
+                <option value="">Chọn thành phố bạn muốn</option>
+                <option value="Ha Noi">Ha Noi</option>
+                <option value="Ho Chi Minh">Ho Chi Minh</option>
+                <option value="Đa Nang">Da Nang</option>
+              </select>
               {errors.city && (
                 <p className="text-red-500 text-sm">{errors.city}</p>
               )}
@@ -199,12 +224,12 @@ const NewHotel = () => {
             <div>
               <label>Price</label>
               <input
-                value={price}
+                value={cheapestPrice}
                 onChange={(e) => setPrice(e.target.value)}
                 placeholder="100"
               />
-              {errors.price && (
-                <p className="text-red-500 text-sm">{errors.price}</p>
+              {errors.cheapestPrice && (
+                <p className="text-red-500 text-sm">{errors.cheapestPrice}</p>
               )}
             </div>
             <span>
@@ -224,18 +249,21 @@ const NewHotel = () => {
             <div className="flex flex-col gap-4 w-1/2">
               <label>Rooms</label>
               <select
-                value={rooms}
-                onChange={(e) => setRooms(e.target.value)}
-                className="select-room"
+                multiple
+                value={selectedRooms}
+                onChange={(e) => {
+                  const values = Array.from(
+                    e.target.selectedOptions,
+                    (option) => option.value
+                  );
+                  setSelectedRooms(values);
+                }}
               >
-                <option value="1">2 Bed Room</option>
-                <option value="2">1 Bed Room</option>
-                <option value="3">Premier City View Room</option>
-                <option value="4">Basement Double Room</option>
-                <option value="5">Budget Double Room</option>
-                <option value="6">Superior basement room</option>
-                <option value="7">Superior basement room</option>
-                <option value="8">Deluxe Window</option>
+                {rooms.map((room) => (
+                  <option key={room._id} value={room._id}>
+                    {room.name} (Room {room._id.slice(-4)})
+                  </option>
+                ))}
               </select>
             </div>
             <div>

@@ -120,11 +120,30 @@ const UpdateRoom = () => {
             {errors.name && <p className="text-red-500">{errors.name}</p>}
 
             <label>Type</label>
-            <input
+            <select
               value={type}
               onChange={(e) => setType(e.target.value)}
-              placeholder="Deluxe / Suite / Standard"
-            />
+              className="select-room"
+              style={{
+                width: "60%",
+                padding: "8px",
+                borderRadius: "4px",
+                border: "1px solid #ccc",
+              }}
+            >
+              <option value="2 Bed Room">2 Bed Room</option>
+              <option value="1 Bed Room">1 Bed Room</option>
+              <option value="Premier City View Room">
+                Premier City View Room
+              </option>
+              <option value="Basement Double Room">Basement Double Room</option>
+              <option value="Budget Double Room">Budget Double Room</option>
+              <option value="Superior basement room">
+                Superior basement room
+              </option>
+              {/* <option value="Superior basement room">Superior basement room</option> */}
+              <option value="Deluxe Window">Deluxe Window</option>
+            </select>
             {errors.type && <p className="text-red-500">{errors.type}</p>}
 
             <label>Price</label>

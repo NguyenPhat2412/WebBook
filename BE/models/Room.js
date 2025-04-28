@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 
 const roomSchema = new Schema(
   {
-    title: {
+    name: {
+      type: String,
+    },
+    type: {
       type: String,
     },
     price: {
@@ -16,9 +19,10 @@ const roomSchema = new Schema(
     desc: {
       type: String,
     },
-    roomNumber: [
+    roomNumbers: [
       {
         type: Number,
+        required: true,
         unavailableDates: { type: [Date] },
       },
     ],

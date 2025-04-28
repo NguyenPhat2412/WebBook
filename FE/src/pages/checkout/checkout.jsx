@@ -18,19 +18,22 @@ const CheckOut = () => {
     },
   ]);
 
-  // Lấy id của user từ localStorage
+  // lấy userId từ localStorage
   useEffect(() => {
-    fetch("http://localhost:5000/api/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUserId(...data);
-      })
-      .catch((err) => console.log(err));
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      console.log("User found in localStorage: ", user);
+      setUserId(user._id);
+    } else {
+      console.error("User not found in localStorage");
+    }
   }, []);
 
-  // Thông tin người dùng đọc id của user
+  // add userId vào localStorage vào userInfo
   useEffect(() => {
-    setUserInfo((prev) => ({ ...prev, userId }));
+    if (userId) {
+      setUserInfo((prev) => ({ ...prev, userId }));
+    }
   }, [userId]);
 
   const [userInfo, setUserInfo] = useState({

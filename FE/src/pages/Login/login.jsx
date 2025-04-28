@@ -33,9 +33,14 @@ const LoginPage = () => {
 
       if (response.ok) {
         alert("Login successful!");
+        // Lưu thông tin người dùng vào localStorage
+        localStorage.setItem("user", JSON.stringify(data.user));
+        // Lưu token vào localStorage
+        localStorage.setItem("token", data.token);
 
         // Chuyển sang trang chủ
         navigate("/");
+        window.location.reload();
       } else {
         setServerError(data.message || "Login failed");
       }

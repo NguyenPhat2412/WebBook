@@ -183,8 +183,16 @@ const Rooms = () => {
                       <td className="py-2 px-3 border">{b.desc}</td>
                       <td className="py-2 px-3 border">{b.maxPeople}</td>
                       <td className="py-2 px-3 border">{b.price}</td>
-                      <td className="py-2 px-3 border">{b.roomNumbers}</td>
-                      <td className="py-2 px-3 border">{b.title}</td>
+                      <td className="py-2 px-3 border">
+                        {" "}
+                        {/* {b.roomNumbers.map((room, index) => (
+                          <p key={index} value={room.number}>
+                            {room.number}
+                          </p>
+                        ))} */}
+                        {b.roomNumbers}
+                      </td>
+                      <td className="py-2 px-3 border">{b.type}</td>
                       <td className="py-2 px-3 border">{b.updatedAt}</td>
                       <td className="py-2 px-3 border">
                         <button

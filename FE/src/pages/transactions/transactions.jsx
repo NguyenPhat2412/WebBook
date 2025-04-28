@@ -4,28 +4,39 @@ import NavBar from "../../../components/Navbar/NavBar";
 import Footer from "../../../components/Header/Footer";
 
 const Transactions = () => {
-  const [user, setUser] = useState(null);
   const [bookings, setBookings] = useState([]);
 
-  // 1. Lấy thông tin người dùng
-  useEffect(() => {
-    fetch("http://localhost:5000/api/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUser(...data);
-      })
-      .catch((err) => console.error("Lỗi lấy user:", err));
-  }, []);
+  // Đọc user trực tiếp từ localStorage mỗi lần render
+  const user = JSON.parse(localStorage.getItem("user"));
 
-  // 2. Khi có user thì lấy booking của user đó
   useEffect(() => {
-    if (!user?._id) return;
+    const fetchBookings = async () => {
+      const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:5000/api/booking/user?userId=${user._id}`)
-      .then((res) => res.json())
-      .then((data) => setBookings(data))
-      .catch((err) => console.error("Lỗi lấy bookings:", err));
-  }, [user]);
+      if (!token || !user?._id) {
+        console.error("No token or user found");
+        return;
+      }
+
+      try {
+        const res = await fetch("http://localhost:5000/api/booking/user", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        const data = await res.json();
+        console.log(data);
+        setBookings(data);
+      } catch (error) {
+        console.error("Error fetching bookings:", error);
+      }
+    };
+
+    fetchBookings();
+  }, [user?._id]); // Depend vào userId mới để fetch đúng booking
 
   return (
     <div className="transaction-page">
@@ -49,9 +60,9 @@ const Transactions = () => {
               </tr>
             </thead>
             <tbody>
-              {bookings.map((b) => (
+              {bookings.map((b, index) => (
                 <tr key={b._id}>
-                  <td>{bookings.indexOf(b) + 1}</td>
+                  <td>{index + 1}</td>
                   <td>{b._id}</td>
                   <td>{b.hotelId?.name || "N/A"}</td>
                   <td>{b.roomIds.flat().join(", ")}</td>
@@ -65,7 +76,6 @@ const Transactions = () => {
           </table>
         )}
       </div>
-
       <Footer />
     </div>
   );

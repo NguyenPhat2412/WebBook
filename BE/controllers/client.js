@@ -8,6 +8,10 @@ const Footer = require("../models/footer");
 const Search = require("../models/search");
 const Room = require("../models/Room");
 const Booking = require("../models/Booking");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+const SECRET_KEY = "abc123xyz";
+const mongoose = require("mongoose");
 exports.postUser = (req, res) => {
   const { username, password, fullName, phoneNumber, email } = req.body;
 
@@ -31,8 +35,18 @@ exports.postUser = (req, res) => {
 
 // post hotel mới
 exports.postHotel = (req, res) => {
-  const { name, type, city, address, distance, photos, desc, rating } =
-    req.body;
+  const {
+    name,
+    type,
+    city,
+    address,
+    distance,
+    photos,
+    desc,
+    rating,
+    cheapestPrice,
+    rooms,
+  } = req.body;
 
   const newHotel = new Hotel({
     name,
@@ -43,6 +57,8 @@ exports.postHotel = (req, res) => {
     photos,
     desc,
     rating,
+    cheapestPrice,
+    rooms: rooms.map((id) => new mongoose.Types.ObjectId(id)),
   });
 
   newHotel
@@ -92,14 +108,23 @@ exports.getLogin = (req, res) => {
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }
-
       // Check password
       if (user.password !== password) {
         return res.status(401).json({ message: "Invalid password" });
       }
+      const token = jwt.sign(
+        { id: user._id, username: username, loginAt: Date.now() },
+        SECRET_KEY,
+        {
+          expiresIn: "1d",
+        }
+      );
 
-      // Login successful
-      res.status(200).json({ message: "Login successful", user });
+      res.status(200).json({
+        message: "Login successful",
+        token,
+        user,
+      });
     })
     .catch((error) => {
       res.status(500).json({ error: error.message });
@@ -348,19 +373,16 @@ exports.getRoomsByHotelId = async (req, res) => {
 // Lấy dữ liệu booking từ mongodb compass
 exports.getBookingByUser = async (req, res) => {
   try {
-    const { userId, username } = req.query;
+    const userId = req.user?.id;
 
-    if (!userId && !username) {
+    if (!userId) {
       return res.status(400).json({ error: "Missing userId or username" });
     }
 
-    const query = userId
-      ? { "userInfo.userId": userId }
-      : { "userInfo.fullName": username };
-
-    const bookings = await Booking.find(query)
+    const bookings = await Booking.find({ "userInfo.userId": userId })
       .populate("hotelId")
-      .populate("roomIds");
+      .populate("roomIds")
+      .populate("userInfo.userId");
 
     res.status(200).json(bookings);
   } catch (error) {
@@ -418,8 +440,17 @@ exports.getUserById = async (req, res) => {
 // chức năng edit khách sạn
 exports.editHotel = async (req, res) => {
   const { id } = req.params;
-  const { name, type, city, address, distance, photos, desc, rating } =
-    req.body;
+  const {
+    name,
+    type,
+    city,
+    address,
+    distance,
+    photos,
+    desc,
+    rating,
+    cheapestPrice,
+  } = req.body;
 
   try {
     const hotel = await Hotel.findByIdAndUpdate(
@@ -433,6 +464,7 @@ exports.editHotel = async (req, res) => {
         photos,
         desc,
         rating,
+        cheapestPrice,
       },
       { new: true }
     );
@@ -448,7 +480,7 @@ exports.editHotel = async (req, res) => {
 // chức năng edit phòng
 exports.editRoom = async (req, res) => {
   const { id } = req.params;
-  const { name, typenơ, price, maxPeople, desc, roomNumbers } = req.body;
+  const { name, type, price, maxPeople, desc, roomNumbers } = req.body;
 
   try {
     const room = await Room.findByIdAndUpdate(

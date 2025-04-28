@@ -13,7 +13,6 @@ const NavBar = () => {
       .then((res) => res.json())
       .then((data) => {
         setNavData(data);
-        console.log(data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -27,14 +26,29 @@ const NavBar = () => {
         }
         throw new Error("Failed to fetch user data");
       })
+
       .then((data) => {
-        setCurrentUser(...data);
-        console.log(data);
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user) {
+          const foundUser = data.find((u) => u._id === user._id);
+          if (foundUser) {
+            setCurrentUser(foundUser);
+          } else {
+            console.error("User not found in the fetched data");
+          }
+        } else {
+          console.error("No user found in localStorage");
+        }
       })
       .catch((err) => console.error(err));
   }, []);
 
+  // hàm lấy thông tin người dùng để tìm kiếm
+
   const handleLogout = () => {
+    // Xóa thông tin người dùng khỏi localStorage hoặc state
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setCurrentUser(null);
     alert("Logout successful!");
     navigate("/register");

@@ -13,6 +13,9 @@ const hotelSchema = new Schema(
     city: {
       type: String,
     },
+    cheapestPrice: {
+      type: Number,
+    },
     address: {
       type: String,
     },
@@ -35,6 +38,10 @@ const hotelSchema = new Schema(
     rooms: {
       type: [{ type: Schema.Types.ObjectId, ref: "Room" }],
       required: true,
+    },
+    // 1: free cancel, 0: no free cancel
+    days: {
+      type: [Array],
     },
   },
   { collection: "hotel_list", timestamps: true }

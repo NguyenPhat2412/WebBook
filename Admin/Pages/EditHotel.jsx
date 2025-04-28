@@ -7,7 +7,7 @@ const EditHotel = () => {
   // const [user, setUser] = useState(null);
   const navigator = useNavigate();
   const [name, setName] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Ha Noi");
   const [distance, setDistance] = useState("");
   const [desc, setDesc] = useState("");
   const [type, setType] = useState("");
@@ -72,6 +72,23 @@ const EditHotel = () => {
     };
     fetchHotel();
   }, [hotelId]);
+
+  // lấy thông tin của tất cả các phòng
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/rooms");
+        if (!res.ok) {
+          throw new Error("Failed to fetch rooms data");
+        }
+        const data = await res.json();
+        setRooms(data);
+      } catch (err) {
+        console.error("Lỗi lấy tất cả các phòng:", err);
+      }
+    };
+    fetchRooms();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -138,11 +155,15 @@ const EditHotel = () => {
 
             <div>
               <label>City</label>
-              <input
+              <select
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="New York"
-              />
+              >
+                <option value="Ha Noi">Ha Noi</option>
+                <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+                <option value="Đa Nang">Da Nang</option>
+              </select>
               {errors.city && (
                 <p className="text-red-500 text-sm">{errors.city}</p>
               )}
@@ -250,14 +271,11 @@ const EditHotel = () => {
                 onChange={(e) => setRooms(e.target.value)}
                 className="select-room"
               >
-                <option value="1">2 Bed Room</option>
-                <option value="2">1 Bed Room</option>
-                <option value="3">Premier City View Room</option>
-                <option value="4">Basement Double Room</option>
-                <option value="5">Budget Double Room</option>
-                <option value="6">Superior basement room</option>
-                <option value="7">Superior basement room</option>
-                <option value="8">Deluxe Window</option>
+                {rooms.map((room) => (
+                  <option key={room._id} value={room._id}>
+                    {room.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div>

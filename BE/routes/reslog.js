@@ -4,6 +4,7 @@ const express = require("express");
 const userController = require("../controllers/client");
 const router = express.Router();
 
+const { verifyToken } = require("../middleware/verifyToken.js");
 // Đưỡng dẫn đăng kí người dùng phương thức post
 router.post("/register", userController.postUser);
 
@@ -59,7 +60,7 @@ router.get("/hotel/:id", userController.getHotelById);
 router.post("/booking", userController.postBooking);
 
 // Đường dẫn lấy dữ liệu booking từ mongodb compass
-router.get("/booking/user", userController.getBookingByUser);
+router.get("/booking/user", verifyToken, userController.getBookingByUser);
 
 // Đường dẫn xóa hotel
 router.delete("/hotel/:id", userController.deleteHotel);
