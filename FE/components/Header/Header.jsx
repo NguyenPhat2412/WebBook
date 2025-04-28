@@ -9,7 +9,7 @@ import { SearchContext } from "../Search/SearchContext";
 const HeaderWebsite = () => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [city, setCity] = useState("");
-  const [roomCount, setRoomCount] = useState("");
+  const [numberPeople, setNumberPeople] = useState("");
   const [dateRange, setDateRange] = useState([
     {
       startDate: new Date(),
@@ -30,7 +30,7 @@ const HeaderWebsite = () => {
       city: city.trim(),
       startDate: dateRange[0].startDate.toISOString(),
       endDate: dateRange[0].endDate.toISOString(),
-      roomCount: roomCount.trim(),
+      numberPeople: numberPeople.trim(),
     };
 
     console.log("🔍 searchData gửi đi:", formattedSearchData);
@@ -82,8 +82,8 @@ const HeaderWebsite = () => {
             <i className="fa fa-female"></i>
             <input
               placeholder="1 adult · 0 children · 1 room"
-              value={roomCount}
-              onChange={(e) => setRoomCount(e.target.value)}
+              value={numberPeople}
+              onChange={(e) => setNumberPeople(e.target.value)}
             />
           </div>
           <div>

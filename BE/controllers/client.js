@@ -236,13 +236,16 @@ exports.getSearch = (req, res) => {
 
 exports.getSearchPage = async (req, res) => {
   try {
-    const { city, startDate, endDate, roomCount } = req.query;
+    const { city, startDate, endDate, numberPeople } = req.query;
 
+    if (!city) {
+      return res.status(400).json({ error: "City is required" });
+    }
     const hotels = await Hotel.find({ city: new RegExp(city, "i") }).populate(
       "rooms"
     );
 
-    if (!startDate || !endDate || !roomCount) {
+    if (!startDate || !endDate || !numberPeople) {
       return res.status(200).json(hotels);
     }
 
@@ -252,21 +255,29 @@ exports.getSearchPage = async (req, res) => {
       const availableRooms = [];
 
       for (const room of hotel.rooms) {
-        const isAvailable = room.unavailableDates.every((range) => {
-          const from = new Date(range.start);
-          const to = new Date(range.end);
-          return new Date(startDate) >= to || new Date(endDate) <= from;
-        });
+        const isAvailable =
+          !room.unavailableDates ||
+          room.unavailableDates.every((range) => {
+            const from = new Date(range.start);
+            const to = new Date(range.end);
 
-        if (isAvailable) {
+            // khoảng thời gian không được chồng lấn
+            return new Date(startDate) >= to || new Date(endDate) <= from;
+          });
+
+        // Kiểm tra số người tối đa của phòng có lớn hơn số người không
+        const checkNumberPeople = room.maxPeople >= parseInt(numberPeople);
+
+        if (isAvailable && checkNumberPeople) {
           availableRooms.push(room._id);
         }
       }
 
-      if (availableRooms.length >= parseInt(roomCount)) {
+      // nếu khách sạn có ít nhất 1 phòng phù hợp
+      if (availableRooms.length > 0) {
         filteredHotels.push({
           ...hotel.toObject(),
-          availableRooms: availableRooms.slice(0, roomCount),
+          availableRooms,
         });
       }
     }
