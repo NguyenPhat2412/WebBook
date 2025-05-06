@@ -15,10 +15,11 @@ const EditHotel = () => {
   const [title, setTitle] = useState("");
   const [cheapestPrice, setPrice] = useState("");
   const [featured, setFeatured] = useState(false);
-  const [rooms, setRooms] = useState("");
+  const [rooms, setRooms] = useState([]);
   const [photos, setPhotos] = useState("");
-
+  const [selectedRooms, setSelectedRooms] = useState([]);
   const [errors, setErrors] = useState({});
+  const [allRooms, setAllRooms] = useState([]);
 
   const { hotelId } = useParams(); // Lấy id từ URL
 
@@ -33,7 +34,8 @@ const EditHotel = () => {
     if (!address.trim()) newErrors.address = "Address is required";
     if (!title.trim()) newErrors.title = "Title is required";
     if (!cheapestPrice) newErrors.cheapestPrice = "Price is required";
-    if (!rooms.trim()) newErrors.rooms = "Rooms is required";
+    if (!rooms) newErrors.rooms = "Rooms is required";
+    if (!featured) newErrors.featured = "Featured is required";
     if (!photos.trim()) newErrors.photos = "Photos are required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -64,7 +66,8 @@ const EditHotel = () => {
         setTitle(data.title || "");
         setPrice(data.cheapestPrice || "");
         setFeatured(data.featured || false);
-        setRooms(data.rooms ? data.rooms[0] : "");
+        setRooms(data.rooms || []);
+        setSelectedRooms(data.rooms ? data.rooms.map((room) => room._id) : []);
         setPhotos(data.photos ? data.photos.join(", ") : "");
       } catch (err) {
         console.error("Lỗi khi lấy thông tin khách sạn:", err);
@@ -77,12 +80,12 @@ const EditHotel = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/rooms");
+        const res = await fetch("http://localhost:5000/api/room");
         if (!res.ok) {
           throw new Error("Failed to fetch rooms data");
         }
         const data = await res.json();
-        setRooms(data);
+        setAllRooms(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error("Lỗi lấy tất cả các phòng:", err);
       }
@@ -103,7 +106,7 @@ const EditHotel = () => {
       title,
       cheapestPrice: parseFloat(cheapestPrice),
       featured,
-      rooms: [rooms],
+      rooms: selectedRooms.map((id) => id.toString()),
       photos: photos.split(",").map((url) => url.trim()),
     };
 
@@ -267,15 +270,24 @@ const EditHotel = () => {
             <div className="flex flex-col gap-4 w-1/2">
               <label>Rooms</label>
               <select
-                value={rooms}
-                onChange={(e) => setRooms(e.target.value)}
+                multiple
+                value={selectedRooms}
+                onChange={(e) => {
+                  const values = Array.from(
+                    e.target.selectedOptions,
+                    (option) => option.value
+                  );
+                  setSelectedRooms(values);
+                }}
                 className="select-room"
               >
-                {rooms.map((room) => (
-                  <option key={room._id} value={room._id}>
-                    {room.name}
-                  </option>
-                ))}
+                {allRooms.map((room) =>
+                  room && room._id ? (
+                    <option key={room._id} value={room._id}>
+                      {room.name} (Room {room._id.slice(-4)})
+                    </option>
+                  ) : null
+                )}
               </select>
             </div>
             <div>

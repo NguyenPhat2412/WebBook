@@ -33,7 +33,10 @@ const LoginPage = () => {
 
       if (response.ok) {
         alert("Login successful!");
-
+        // Lưu thông tin người dùng vào localStorage
+        localStorage.setItem("user", JSON.stringify(data.user));
+        // Lưu token vào localStorage nếu cần
+        localStorage.setItem("token", data.token);
         // Chuyển sang trang chủ
         navigate("/");
       } else {

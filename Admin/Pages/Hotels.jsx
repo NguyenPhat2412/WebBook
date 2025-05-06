@@ -36,7 +36,7 @@ const Hotels = () => {
   // Lấy booking khi đã có user
   useEffect(() => {
     if (!user?._id) return;
-    fetch(`http://localhost:5000/api/booking/user?userId=${user._id}`)
+    fetch(`http://localhost:5000/api/booking`)
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
@@ -80,6 +80,7 @@ const Hotels = () => {
   // edit phòng
   const handleEditHotel = (hotelId) => {
     navigate(`/edit-hotel/${hotelId}`);
+    window.location.reload();
   };
 
   const handleAddHotel = () => {

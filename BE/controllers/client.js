@@ -44,7 +44,9 @@ exports.postHotel = (req, res) => {
     photos,
     desc,
     rating,
+    featured,
     cheapestPrice,
+    title,
     rooms,
   } = req.body;
 
@@ -57,7 +59,9 @@ exports.postHotel = (req, res) => {
     photos,
     desc,
     rating,
+    featured,
     cheapestPrice,
+    title,
     rooms: rooms.map((id) => new mongoose.Types.ObjectId(id)),
   });
 
@@ -401,6 +405,17 @@ exports.getBookingByUser = async (req, res) => {
   }
 };
 
+// Lấy dữ liệu booking từ mongodb compass
+exports.getBooking = (req, res) => {
+  Booking.find()
+    .then((cities) => {
+      res.status(200).json(cities);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
+};
+
 // Xóa hotel theo id
 exports.deleteHotel = async (req, res) => {
   const { id } = req.params;
@@ -461,6 +476,7 @@ exports.editHotel = async (req, res) => {
     desc,
     rating,
     cheapestPrice,
+    title,
   } = req.body;
 
   try {
@@ -475,6 +491,7 @@ exports.editHotel = async (req, res) => {
         photos,
         desc,
         rating,
+        title,
         cheapestPrice,
       },
       { new: true }

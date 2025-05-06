@@ -62,6 +62,8 @@ router.post("/booking", userController.postBooking);
 // Đường dẫn lấy dữ liệu booking từ mongodb compass
 router.get("/booking/user", verifyToken, userController.getBookingByUser);
 
+// Đường dẫn lấy dữ liệu booking từ mongodb compass
+router.get("/booking", userController.getBooking);
 // Đường dẫn xóa hotel
 router.delete("/hotel/:id", userController.deleteHotel);
 

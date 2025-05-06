@@ -118,7 +118,7 @@ const NewHotel = () => {
 
       <div className="col-span-1 md:col-span-4 p-6 dashboard-container">
         <div className="new_hotel shadow-md bg-white p-4 rounded-lg mb-4">
-          <h1 className="text-2xl font-bold mb-4">Thêm phòng mới</h1>
+          <h1 className="text-2xl font-bold mb-4">Thêm khách sạn mới</h1>
         </div>
         <div className="new-room-list bg-white p-6 rounded-lg shadow-md grid grid-cols-2">
           <div className="new-room-behind flex flex-col gap-4 w-1/2 mr-4">

@@ -97,7 +97,7 @@ const CheckOut = () => {
       rooms.forEach((room) => {
         room.roomNumbers.forEach((roomNumber) => {
           if (selectedRooms.includes(roomNumber)) {
-            total += room.price;
+            total += room.price * days;
           }
         });
       });

@@ -58,20 +58,16 @@ const Users = () => {
   }, [user]);
 
   // Delete user theo id
-  const handleDeleteUser = async (userId) => {
-    fetch(`http://localhost:5000/api/user/${userId}`, {
+  const handleDeleteUser = async (id) => {
+    const response = await fetch(`http://localhost:5000/api/user/${id}`, {
       method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setUsers(users.filter((user) => user._id !== userId));
-          alert("User deleted successfully!");
-        } else {
-          alert("Failed to delete user.");
-        }
-      })
-      .catch((err) => console.error("Lỗi xóa user:", err));
+    });
+    if (response.ok) {
+      setUsers(users.filter((user) => user._id !== id));
+      alert("User deleted successfully!");
+    } else {
+      alert("Failed to delete user!");
+    }
   };
 
   // Phân trang

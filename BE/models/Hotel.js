@@ -34,6 +34,9 @@ const hotelSchema = new Schema(
       min: 0,
       max: 5,
     },
+    title: {
+      type: String,
+    },
     featured: { type: Boolean, default: false },
     rooms: {
       type: [{ type: Schema.Types.ObjectId, ref: "Room" }],
